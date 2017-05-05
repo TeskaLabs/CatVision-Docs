@@ -50,7 +50,8 @@ repositories {
 	}
 }
 dependencies {
-    compile {name: "cvio-v1705-rc.1-release", ext:"aar"}
+	...
+	compile {name: "cvio-v1705-rc.1-release", ext:"aar"}
 }
 ```
 
