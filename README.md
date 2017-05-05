@@ -27,6 +27,9 @@ Create an account at [https://catvision.io/register](https://catvision.io/regist
 Note that this how-to is a **minimum setup** for your Android application to have `CatVision` integrated. To integrate `CatVision` *by the book* follow the [detailed step-by-step](./)
 
 #### Dependency
+
+Download the `cvio-v1705-rc.1-release.aar` and put it in `yourproject/yourapp/aars`
+
 In your `app.gradle` add `maven` repository and set up `com.teskalabs.cvio` as a dependency:
 
 ```
