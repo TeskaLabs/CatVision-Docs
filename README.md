@@ -2,9 +2,9 @@
 
 CatVision is a set of components that makes it possible to securely transfer screen, mouse and keyboard events to your mobile and IoT device.
 
-<a href="">
-	<img src="assets/Catvision.svg" width="100%" height="450">
-</a>
+<div style="text-align: center">
+	<a href="assets/Catvision.svg"><img src="assets/Catvision.svg"/></a>
+</div>
 
 1. Your device equipped with [**SeaCat Android SDK**](https://s3.amazonaws.com/resources.seacat.mobi/releases/SeaCatClient_Android_v1611-rc-2-release.aar) and  [**CatVision SDK**](https://s3.amazonaws.com/resources.seacat.mobi/releases/tlra-v1611-rc-2-release.aar) connects to the **SeaCat Gateway**
 2. The backend of your web application uses an **API key** to request a time-limited **Auth Token** from **CatVision.io API**, which is then passed to the [**CatVision Screen** (TODO: link to aar)](catvision-screen.md) component.
