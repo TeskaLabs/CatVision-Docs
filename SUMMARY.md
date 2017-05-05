@@ -1,13 +1,11 @@
 # Summary
 
-### CatVision
+## CatVision
 
 * [Introduction](/README.md)
 
-### Getting Started
+## Getting Started
 
-* [CatVision.io API Key](CatVision.io.md)
+* [Get API Key at CatVision.io](CatVision.io.md)
 * [Integrate CatVision Android SDK](/CatVisionAndroidSDK.md)
-
-
 
