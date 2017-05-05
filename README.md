@@ -63,6 +63,9 @@ dependencies {
 Initialize `CatVision` and `SeaCatClient` in your `Application` object's `onCreate()`
 
 ```
+import com.teskalabs.cvio.CatVision;
+import com.teskalabs.seacat.android.client.SeaCatClient;
+
 public class ExampleApp extends Application
 {
 	@Override
