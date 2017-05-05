@@ -31,13 +31,14 @@ Let us say we have an **Android Project** called `Example Project` with an **app
 #### Dependency
 
 
-Download the `cvio-v1705-rc.1-release.aar` and put it in `yourproject/yourapp/aars`
+Download the **CatVision SDK** and **SeaCat SDK** and put it in `yourproject/yourapp/aars`
 
 ```
 $ cd /path/to/exampleproject/example
 $ mkdir aars 
 $ cd aars
 $ wget https://s3.amazonaws.com/resources.seacat.mobi/releases/cvio-v1705-rc.1-release.aar
+$ wget https://s3.amazonaws.com/resources.seacat.mobi/releases/SeaCatClient_Android_v1611-rc-2-release.aar
 ```
 
 In the application's `build.gradle` add `maven` repository and set up `com.teskalabs.cvio` as a dependency:
@@ -52,10 +53,11 @@ repositories {
 dependencies {
 	...
 	compile(name: "cvio-v1705-rc.1-release", ext:"aar")
+	compile(name: "SeaCatClient_Android_v1611-rc-2-release", ext:"aar")
 }
 ```
 
-> **Sync project** is needed in order to reload paths in android studio after you update dependencies
+> **Sync project** and **Clean project** is needed in order to reload paths in android studio after you update dependencies
 
 #### Initialize
 Initialize `CatVision` and `SeaCatClient` in your `Application` object's `onCreate()`
