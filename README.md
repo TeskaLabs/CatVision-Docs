@@ -45,10 +45,12 @@ In the application's `build.gradle` add `maven` repository and set up `com.teska
 ```
 repositories {
 	jcenter()
-	mavenCentral()
+	flatDir {
+		dirs 'libs'
+	}
 }
 dependencies {
-    compile 'com.teskalabs.cvio:v1705-rc.1'
+    compile {name: "cvio-v1705-rc.1-release", ext:"aar"}
 }
 ```
 
