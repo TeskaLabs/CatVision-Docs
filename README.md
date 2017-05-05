@@ -55,6 +55,8 @@ dependencies {
 }
 ```
 
+> **Sync project** is needed in order to reload paths in android studio after you update dependencies
+
 #### Initialize
 Initialize `CatVision` and `SeaCatClient` in your `Application` object's `onCreate()`
 
