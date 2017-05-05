@@ -6,6 +6,6 @@
 
 ## Getting Started
 
-* [Get API Key at CatVision.io](CatVision.io.md)
-* [Integrate CatVision Android SDK](/CatVisionAndroidSDK.md)
+* [CatVision.io API Key](CatVision.io.md)
+* [CatVision Android SDK](/CatVisionAndroidSDK.md)
 
