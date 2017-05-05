@@ -34,10 +34,10 @@ Let us say we have an **Android Project** called `Example Project` with an **app
 Download the `cvio-v1705-rc.1-release.aar` and put it in `yourproject/yourapp/aars`
 
 ```
-cd /path/to/exampleproject/example
-mkdir aars
-cd aars
-wget https://s3.amazonaws.com/resources.seacat.mobi/releases/cvio-v1705-rc.1-release.aar
+$ cd /path/to/exampleproject/example
+$ mkdir aars 
+$ cd aars
+$ wget https://s3.amazonaws.com/resources.seacat.mobi/releases/cvio-v1705-rc.1-release.aar
 ```
 
 In the application's `build.gradle` add `maven` repository and set up `com.teskalabs.cvio` as a dependency:
@@ -158,7 +158,7 @@ With your application equipped with the [**SeaCat Android SDK**](https://s3.amaz
 
 ### Initialize Remote Access
 
-Before you render the page \(TODO: where???\) with the Remote Access Screen, you need to generate a time limited auth token on the following address: `https://ra.teskalabs.com/api/authtoken?api_key=YOURAPIKEY`
+Your backend server Before you render the page \(TODO: where???\) with the Remote Access Screen, you need to generate a time limited auth token on the following address: `https://ra.teskalabs.com/api/authtoken?api_key=YOURAPIKEY`
 
 #### PHP
 
