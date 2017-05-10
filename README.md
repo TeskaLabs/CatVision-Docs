@@ -16,7 +16,7 @@ Here's a quick how-to that gets your app CatVision-enabled and your frontend set
 
 > Each chapter has a **detailed step-by-step** where you will find how to proceed "by the book". 
 
-### 1. Create an API key at CatVision.io ([detailed step-by-step](./))
+### 1. Create an API key at CatVision.io ([detailed step-by-step](./CatVision.io.md))
 
 CatVision.io is a portal where you can manage your devices and API keys that are needed for your backend be able to request a time limited auth token that you need to pass to the CatVision Display (see *CatVision Display integration* below) component to be granted to establish connection.
 
