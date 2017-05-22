@@ -12,9 +12,9 @@ Here's a quick how-to that gets your app CatVision-enabled and your web applicat
 2. Integrate CatVision SDK into your Android app
 3. Integrate CatVision Display into your web application
 
-> Each chapter has a **detailed step-by-step** where you will find how to proceed "by the book". 
+> Each chapter has a **detailed step-by-step** where you will find how to proceed "by the book". Find the chapters in the left column. 
 
-### 1. Create an API key at CatVision.io ([detailed step-by-step](./CatVision.io.md))
+### 1. Create an API key at CatVision.io
 
 CatVision.io is a web service where you can manage your CatVision API keys. They are needed to authorize CatVision Display component in your web application.
 
@@ -31,7 +31,7 @@ A **Product** is a namespace for your applications. Typically you will manage on
 The API key consists of two parts. **Secret API Key** let's you obtain an auth token for the CatVision Display component. The **API Key ID** is used to board your application into the CatVision Product that you created.
 
 
-### 2. Integrate CatVision SDK into your Android app ([detailed step-by-step](./CatVisionAndroidSDK.md))
+### 2. Integrate CatVision SDK into your Android app
 
 In this section we will create an application called `Example` in a directory `./example-project` and it will be assumed that we created a Product `Example` at [https://catvision.io](https://catvision.io) where we also created an API Key and we know the **API Key ID** that will be referred to as `[API_KEY_ID]`.
 

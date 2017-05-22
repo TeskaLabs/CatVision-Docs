@@ -3,6 +3,7 @@
 ## CatVision
 
 * [Introduction](/README.md)
+* [Architecture and Security](/Architecture.md)
 
 ## Getting Started
 
