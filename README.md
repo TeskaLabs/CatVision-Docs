@@ -86,9 +86,10 @@ public class ExampleApp extends Application
 }
 ```
 
-In order to get this to work we need to tell the `AndroidManifest.xml` we are implementing a custom Application object. The manifest also needs to contain our `[API_KEY_ID]` so that the application gets attached to your Product at [catvision.io](https://catvision.io).
+In order to get this to work we need to tell the `AndroidManifest.xml` we are implementing a custom Application object and that the use of `android.permission.INTERNET` is requested. The manifest also needs to contain our `[API_KEY_ID]` so that the application gets attached to your Product at [catvision.io](https://catvision.io).
 
 ```
+<uses-permission android:name="android.permission.INTERNET"/>
 <application
 	...
 	android:name=".ExampleApp">
@@ -215,31 +216,33 @@ Here is an example of how to fetch the token from CatVision.io using some of the
 
 ```php
 <?php
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://catvision.io/api/authtoken?api_key=[SECRET_API_KEY]');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-
-$response = curl_exec($ch);
-$response_json = json_decode($response);
-
-$auth_token = $response_json->{'auth_token'};
-
+$url = 'https://catvision.io/api/authtoken';
+$secret_api_key = '[SECRET_API_KEY]';
+$options = array(
+    'http' => array(
+        'header'  => "X-SC-SecretAPIKey: $secret_api_key\r\n",
+        'method'  => 'POST',
+        'content' => ''
+    )
+);
+$context  = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+$obj = json_decode($result);
+$auth_token = $obj->{'auth_token'};
 ```
 
 ##### Python
 
 ```py
 import requests, json
-r = requests.post('https://ra.teskalabs.com/api/authtoken?api_key=[SECRET_API_KEY]')
+r = requests.post('https://catvision.io/api/authtoken', headers={
+	'X-SC-SecretAPIKey' : '[SECRET_API_KEY]'
+})
 res = json.loads(r.text)
-
 auth_token = res['auth_token']
 ```
 
 #### Integrate CatVision Display
-
-At this point you have your auth token and it is assumed you can render it to the response HTML.
 
 First load the CatVision Display javascript from the TeskaLabs CDN.
 
