@@ -210,7 +210,7 @@ At this point you have your application equipped with the **CatVision SDK** and 
 
 The CatVision Display component needs a time limited auth token to authorize. Your **web application backend** will use your **Secret API key** (`SECRET_API_KEY`) to fetch the token.
 
-Here is an example of how to fetch the token from CatVision.io using some of the popular languages. The endpoint to be called is the following: `https://catvision.io/api/authtoken?api_key=[SECRET_API_KEY]` where `[SECRET_API_KEY]` is the one you generated in  *step 1 - CatVision.io API Key*.
+Here is an example of how to fetch the token from CatVision.io using some of the popular languages. The endpoint to be called is the following: `https://catvision.io/api/authtoken`. You need to add the `[SECRET_API_KEY]` in header `X-SC-SecretAPIKey`.
 
 ##### PHP
 
