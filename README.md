@@ -42,13 +42,13 @@ So let us go ahead and create a new **Android Project** called `Example Project`
 #### Dependency
 
 
-Download the **CatVision SDK** and put it in `./example-project/example/aars`
+Download the [**CatVision SDK**](http://get.catvision.io/CatVision_Android_v1705-release.aar) and put it in `./example-project/example/aars`
 
 ```
 $ cd /path/to/example-project/example
 $ mkdir aars 
 $ cd aars
-$ wget https://s3.amazonaws.com/resources.seacat.mobi/releases/cvio-v1705-rc.1-release.aar
+$ wget http://get.catvision.io/CatVision_Android_v1705-release.aar
 ```
 
 In the application's `build.gradle` add a `flatDir` repository and set up dependencies:
