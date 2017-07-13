@@ -1,6 +1,6 @@
-# CatVision
+# CatVision.io
 
-CatVision is a technology that provides an easy and secure remote access to a display of your mobile application.
+CatVision.io is a technology that provides an easy and secure remote access to a display of your mobile application.
 
 Users of your CatVision-equipped application can get a real-time online support without being asked what is currently on their screen. An application can be used remotely without a person to be physically present at the hardware that the application runs on. For example, this can be very useful in use with room control tablets or Android IoT devices.
 
@@ -12,7 +12,7 @@ Here's a quick how-to that gets your app CatVision-enabled and your web applicat
 2. Integrate CatVision SDK into your Android app
 3. Integrate CatVision Display into your web application
 
-> Each chapter has a **detailed step-by-step** where you will find how to proceed "by the book". Find the chapters in the left column. 
+> Each chapter has a **detailed step-by-step** where you will find how to proceed "by the book". Find the chapters in the left column.
 
 ### 1. Create an API key at CatVision.io
 
@@ -30,7 +30,6 @@ A **Product** is a namespace for your applications. Typically you will manage on
 
 The API key consists of two parts. **Secret API Key** let's you obtain an auth token for the CatVision Display component. The **API Key ID** is used to board your application into the CatVision Product that you created.
 
-
 ### 2. Integrate CatVision SDK into your Android app
 
 In this section we will create an application called `Example` in a directory `./example-project` and it will be assumed that we created a Product `Example` at [https://catvision.io](https://catvision.io) where we also created an API Key and we know the **API Key ID** that will be referred to as `[API_KEY_ID]`.
@@ -40,7 +39,6 @@ So let us go ahead and create a new **Android Project** called `Example Project`
 > **The minimum Android API level is 21 or later**. Otherwise CatVision Screen capture won't work.
 
 #### Dependency
-
 
 Download the [**CatVision SDK**](http://get.catvision.io/CatVision_Android_v1705-release.aar) and put it in `./example-project/example/aars`
 
@@ -55,14 +53,14 @@ In the application's `build.gradle` add a `flatDir` repository and set up depend
 
 ```
 repositories {
-	jcenter()
-	flatDir {
-		dirs 'aars'
-	}
+    jcenter()
+    flatDir {
+        dirs 'aars'
+    }
 }
 dependencies {
-	...
-	compile(name: "cvio-v1705-rc.1-release", ext:"aar")
+    ...
+    compile(name: "cvio-v1705-rc.1-release", ext:"aar")
 }
 ```
 
@@ -77,12 +75,12 @@ import com.teskalabs.cvio.CatVision;
 
 public class ExampleApp extends Application
 {
-	@Override
-	public void onCreate()
-	{
-		super.onCreate();
-		CatVision.initialize(this);
-	}
+    @Override
+    public void onCreate()
+    {
+        super.onCreate();
+        CatVision.initialize(this);
+    }
 }
 ```
 
@@ -91,11 +89,11 @@ In order to get this to work we need to tell the `AndroidManifest.xml` we are im
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <application
-	...
-	android:name=".ExampleApp">
+    ...
+    android:name=".ExampleApp">
 
-	<meta-data android:name="cvio.api_key_id" android:value="[API_KEY_ID]" />
-	...
+    <meta-data android:name="cvio.api_key_id" android:value="[API_KEY_ID]" />
+    ...
 
 </application>
 ```
@@ -110,21 +108,21 @@ So let us get an instance of `CatVision` after our Main Activity is created
 
 ```
 public class MainActivity extends AppCompatActivity {
-	private static final String TAG = MainActivity.class.getName();
-	private CatVision catvision;
-	
-	@Override
+    private static final String TAG = MainActivity.class.getName();
+    private CatVision catvision;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         catvision = CatVision.getInstance();
-	}
-	...
+    }
+    ...
 }
 ```
 
-#### Application Instance Identification - *Client Handle*
+#### Application Instance Identification - _Client Handle_
 
 **Client Handle** is a unique application instance identificator. You need to identify your running application instance so that you can specify which instance to connect to with CatVision Display component in your web application.
 
@@ -134,7 +132,7 @@ Whenever you are ready to create an identification for the running application i
 catvision.setClientHandle(CatVision.DEFAULT_CLIENT_HANDLE);
 ```
 
-A *Handle* called **Client Tag** (looks like `[GMYDQMRQGIYGCMBS]`) is automatically created for you and after you call `setClientHandle` you can find new record in your Product's clients list at [catvision.io](https://catvision.io). However you are encouraged to generate and specify your own client handle.
+A _Handle_ called **Client Tag** \(looks like `[GMYDQMRQGIYGCMBS]`\) is automatically created for you and after you call `setClientHandle` you can find new record in your Product's clients list at [catvision.io](https://catvision.io). However you are encouraged to generate and specify your own client handle.
 
 To tell CatVision that except for the default handle you use your own client handle simply replace the default client handle with your own:
 
@@ -144,7 +142,6 @@ catvision.setClientHandle(customClientHanlde);
 ```
 
 > See the [TeskaLabs Identity Management docs](https://www.teskalabs.com/docs/intro/identity-management) for more information regarding indentification of an application instance
-
 
 #### Capture the screen
 
@@ -157,14 +154,14 @@ private final int menuItemStopCaptureId = 2;
 @Override
 public boolean onPrepareOptionsMenu(Menu menu)
 {
-	menu.clear();
-	int menuGroup1Id = 1;
-	if (catvision.isStarted()) {
-		menu.add(menuGroup1Id, menuItemStopCaptureId, 1, "Stop capture");
-	} else {
-		menu.add(menuGroup1Id, menuItemStartCaptureId, 1, "Start capture");
-	}
-	return super.onPrepareOptionsMenu(menu);
+    menu.clear();
+    int menuGroup1Id = 1;
+    if (catvision.isStarted()) {
+        menu.add(menuGroup1Id, menuItemStopCaptureId, 1, "Stop capture");
+    } else {
+        menu.add(menuGroup1Id, menuItemStartCaptureId, 1, "Start capture");
+    }
+    return super.onPrepareOptionsMenu(menu);
 }
 ```
 
@@ -174,18 +171,18 @@ Now we implement click listeners and we will request start of CatVision screen c
 @Override
 public boolean onOptionsItemSelected(MenuItem item)
 {
-	switch (item.getItemId()) {
-		case menuItemStartCaptureId:
-			catvision.requestStart(this, CATVISION_REQUEST_CODE);
- 			return true;
+    switch (item.getItemId()) {
+        case menuItemStartCaptureId:
+            catvision.requestStart(this, CATVISION_REQUEST_CODE);
+             return true;
 
-		case menuItemStopCaptureId:
-			catvision.stop();
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
+        case menuItemStopCaptureId:
+            catvision.stop();
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
 }
 ```
 
@@ -194,9 +191,9 @@ Now when start button is clicked, Android will ask user to confirm that screen c
 ```
 @Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	if (requestCode == CATVISION_REQUEST_CODE) {
-		catvision.onActivityResult(this, resultCode, data);
-	}
+    if (requestCode == CATVISION_REQUEST_CODE) {
+        catvision.onActivityResult(this, resultCode, data);
+    }
 }
 ```
 
@@ -208,7 +205,7 @@ At this point you have your application equipped with the **CatVision SDK** and 
 
 #### Get auth token from CatVision.io
 
-The CatVision Display component needs a time limited auth token to authorize. Your **web application backend** will use your **Secret API key** (`SECRET_API_KEY`) to fetch the token.
+The CatVision Display component needs a time limited auth token to authorize. Your **web application backend** will use your **Secret API key** \(`SECRET_API_KEY`\) to fetch the token.
 
 Here is an example of how to fetch the token from CatVision.io using some of the popular languages. The endpoint to be called is the following: `https://catvision.io/api/authtoken`. You need to add the `[SECRET_API_KEY]` in header `X-SC-SecretAPIKey`.
 
@@ -236,7 +233,7 @@ $auth_token = $obj->{'auth_token'};
 ```py
 import requests, json
 r = requests.post('https://catvision.io/api/authtoken', headers={
-	'X-SC-SecretAPIKey' : '[SECRET_API_KEY]'
+    'X-SC-SecretAPIKey' : '[SECRET_API_KEY]'
 })
 res = json.loads(r.text)
 auth_token = res['auth_token']
@@ -248,29 +245,28 @@ First load the CatVision Display javascript from the TeskaLabs CDN.
 
 ```
 <head>
-	<script type="text/javascript" src="https://cdn.teskalabs.com/cvio.min.js"></script>
-	...
+    <script type="text/javascript" src="https://cdn.teskalabs.com/cvio.min.js"></script>
+    ...
 ```
 
 For initialization, put this code immediatlly after the body tag.
 
 ```html
 <script type="text/javascript">
-	CVIO.init({authToken: '[AUTH_TOKEN]'});
+    CVIO.init({authToken: '[AUTH_TOKEN]'});
 </script>
 ```
-
 
 You need to have an existing `<canvas id='mycanvas'>` in your DOM. Once it has loaded you can instantiate a CatVision Display and connect.
 
 ```html
 <canvas id='cviocanvas'>
 <script type="text/javascript">
-	var cvioDisplay = new CVIODisplay({
-		target:       document.getElementById('cviocanvas'),
-		clientHandle: '[CLIENT_HANDLE]',
-	});
-	cvioDisplay.connect();
+    var cvioDisplay = new CVIODisplay({
+        target:       document.getElementById('cviocanvas'),
+        clientHandle: '[CLIENT_HANDLE]',
+    });
+    cvioDisplay.connect();
 </script>
 ```
 
@@ -280,9 +276,9 @@ If you want to use your own Client Handle initialize and connect to the CatVisio
 
 ```js
 var cvioDisplay = new CVIODisplay({
-	target:          document.getElementById('cviocanvas'),
-	deviceHandle:    '[CLIENT_HANDLE]',
-	deviceHandleKey: 'u'
+    target:          document.getElementById('cviocanvas'),
+    deviceHandle:    '[CLIENT_HANDLE]',
+    deviceHandleKey: 'u'
 });
 cvioDisplay.connect();
 ```
