@@ -1,6 +1,6 @@
 # CatVision.io
 
-CatVision.io is a product that provides an easy and secure remote access to a screen of your mobile application aka the screen share and/or a remote control
+CatVision.io is a product that provides an easy and secure remote access to a screen of your mobile application aka the screen share and/or a remote control of the mobile application.
 
 Users of a mobile application equipped by CatVision.io can get a real-time online support without being asked what is currently on their screen. An application can be used remotely without a person to be physically present at the hardware that the application runs on. For example, this can be very useful in use with room control tablets or Android IoT devices.
 
