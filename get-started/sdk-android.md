@@ -1,10 +1,12 @@
 # Adding a CatVision.io SDK into an Android application
 
-In this section we will create an application called `Example` in a directory `./example-project` and it will be assumed that we created a Product `Example` at [https://catvision.io](https://catvision.io) where we also created an API Key and we know the **API Key ID** that will be referred to as `[API_KEY_ID]`.
+In this section we describe how to integrate a CatVision.io SDK into an Android application. We assume that CatVision.io API Key is created and we know the **API Key ID** that is referred to as `[API_KEY_ID]`. Please refer to chapter XXX for how to create API Key.
 
-So let us go ahead and create a new **Android Project** called `Example Project` with one application module called `Example`.
+## Prerequisities
 
-> **The minimum Android API level is 21 or later**. Otherwise CatVision Screen capture won't work.
+ * Android 5.0 (API level 21) or newer
+ * Access to source code of the mobile application
+ * Android Studio
 
 ## Dependency
 
