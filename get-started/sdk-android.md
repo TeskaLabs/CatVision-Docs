@@ -1,4 +1,4 @@
-### Adding a CatVision.io SDK into an Android application
+# Adding a CatVision.io SDK into an Android application
 
 In this section we will create an application called `Example` in a directory `./example-project` and it will be assumed that we created a Product `Example` at [https://catvision.io](https://catvision.io) where we also created an API Key and we know the **API Key ID** that will be referred to as `[API_KEY_ID]`.
 
@@ -6,7 +6,7 @@ So let us go ahead and create a new **Android Project** called `Example Project`
 
 > **The minimum Android API level is 21 or later**. Otherwise CatVision Screen capture won't work.
 
-#### Dependency
+## Dependency
 
 Download the [**CatVision SDK**](http://get.catvision.io/CatVision_Android_v1705-release.aar) and put it in `./example-project/example/aars`
 
@@ -34,7 +34,7 @@ dependencies {
 
 You may wnat to **Sync project** and **Clean project**. It is needed in order to reload paths in Android Studio after you update dependencies or other Gradle file settings.
 
-#### Initialize
+## Initialize
 
 We need to create an `Application` object where we will initialize `CatVision` in the application object's `onCreate()` lifecycle method.
 
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-#### Application Instance Identification - _Client Handle_
+## Application Instance Identification - _Client Handle_
 
 **Client Handle** is a unique application instance identificator. You need to identify your running application instance so that you can specify which instance to connect to with CatVision Display component in your web application.
 
@@ -111,7 +111,7 @@ catvision.setClientHandle(customClientHanlde);
 
 > See the [TeskaLabs Identity Management docs](https://www.teskalabs.com/docs/intro/identity-management) for more information regarding indentification of an application instance
 
-#### Capture the screen
+## Capture the screen
 
 We are going to implement start and stop capture buttons in the options menu. Add the following code to the Main Activity class. It will ensure that the start button is only present when CatVision screen capture isn't already active - and vice versa with the stop capture option.
 
