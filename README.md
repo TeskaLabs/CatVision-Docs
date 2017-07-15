@@ -1,8 +1,14 @@
 # CatVision.io
 
-CatVision.io is a technology that provides an easy and secure remote access to a display of your mobile application.
+CatVision.io is a product that provides an easy and secure remote access to a screen of your mobile application aka the screen share and/or a remote control 
 
-Users of your CatVision-equipped application can get a real-time online support without being asked what is currently on their screen. An application can be used remotely without a person to be physically present at the hardware that the application runs on. For example, this can be very useful in use with room control tablets or Android IoT devices.
+Users of your mobile application equipped by CatVision.io can get a real-time online support without being asked what is currently on their screen. An application can be used remotely without a person to be physically present at the hardware that the application runs on. For example, this can be very useful in use with room control tablets or Android IoT devices.
+
+
+
+CatVision.io SDK for Android OS requires a version [5.0](https://developer.android.com/about/versions/android-5.0.html) and more \(minimum API level 21\).
+
+_CatVision.io SDK for iOS is currently in closed beta and will be publicly released soon._
 
 ## Quick Start
 
