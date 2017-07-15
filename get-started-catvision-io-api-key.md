@@ -1,8 +1,6 @@
 ### CatVision.io
 
-CatVision.io is a web application where you **manage** your connected clients and  **API keys**. You also display a remote screens of your mobile apps on this portal. You will first need to **register at CatVision.io** \([https://catvision.io/register](https://catvision.io/register)\)
-
-[![CatVision.io registration](assets/cvio_register.png)](https://catvision.io/register)
+CatVision.io is a web application where you **manage** your connected clients and  **API keys**. You also display a remote screens of your mobile apps on this portal. You will first need to **register at **[**CatVision.io**](https://app.catvision.io/), if you already have a login at CatVision.io, please use it to sign in.
 
 #### New Product
 
