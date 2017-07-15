@@ -8,6 +8,6 @@
 ## Getting Started
 
 * [CatVision.io API Key](CatVision.io.md)
-* [CatVision Android SDK](/CatVisionAndroidSDK.md)
-* [CatVision Display web component](/CatVisionDisplay.md)
+* [CatVision.io SDK for Android](/CatVisionAndroidSDK.md)
+* [CatVision.io Display](/CatVisionDisplay.md)
 
