@@ -14,9 +14,9 @@ _CatVision.io SDK for iOS is currently in closed beta and will be publicly relea
 
 Here is a step-by-step guidelines that gets you quickly up to speed with CatVision.io:
 
-1. [Get an CatVision.io API key](//get-started-catvision-io-api-key.md)
-2. [Add CatVision.io SDK into your mobile app](//get-started-catvision-io-sdk-android.md)
-3. [Add CatVision.io Display into your web application](//get-started-catvision-io-display.md) \(optionally\)
+1. [Get an CatVision.io API key](//get-started/api-key.md)
+2. [Add CatVision.io SDK into your mobile app](//get-started/sdk-android.md)
+3. [Add CatVision.io Display into your web application](//get-started/display.md) \(optionally\)
 
 ---
 
