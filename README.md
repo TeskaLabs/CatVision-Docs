@@ -12,11 +12,11 @@ _CatVision.io SDK for iOS is currently in closed beta and will be publicly relea
 
 ## Quick Start
 
-Here's a quick how-to that gets your app CatVision-enabled and your web application set up for viewing a mobile application's screen in three simple steps:
+Here is a step-by-step guidelines that gets you quickly up to speed with CatVision.io:
 
-1. Create an API key at CatVision.io
-2. Integrate CatVision SDK into your Android app
-3. Integrate CatVision Display into your web application
+1. Register at CatVision.io and get an API key
+2. Add CatVision SDK into your mobile app
+3. Integrate CatVision Display into your web application \(optionally\)
 
 > Each chapter has a **detailed step-by-step** where you will find how to proceed "by the book". Find the chapters in the left column.
 
