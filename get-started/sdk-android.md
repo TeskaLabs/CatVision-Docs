@@ -1,13 +1,13 @@
-# Adding a CatVision.io SDK into an Android application
+# Adding a CatVision.io SDK into an Android app
 
-In this section we describe how to integrate a CatVision.io SDK into an Android application. We assume that CatVision.io API Key is created and we know the **API Key ID** that is referred to as `[API_KEY_ID]`. Please refer to chapter ["Catvision.io API Key"](//get-started/api-key.md) for more details.
+In this section we describe how to integrate a CatVision.io SDK into an Android application.
 
 ## Prerequisities
 
 * Android 5.0 \(API level 21\) or newer
 * Access to source code of the mobile application
 * Android Studio
-* CatVision.io API Key ID
+* CatVision.io API Key ID (see [Catvision.io API Key](//get-started/api-key.md))
 
 ## Dependency
 
