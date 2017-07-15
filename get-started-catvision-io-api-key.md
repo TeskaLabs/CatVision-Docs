@@ -10,11 +10,17 @@ CatVision.io is a web application where you **manage** your connected clients an
 
 Go to a dropdown menu at the upper right corner of the screen and click **API Keys**
 
+
+
 ![CatVision.io Add App Menu](assets/cvio_add_apikey_menu2.png)
 
-![CatVision.io Add App Menu](assets/cvio_add_apikey.png)
+#### 3. Generate a new API Key
 
-![CatVision.io Add App Menu](assets/cvio_add_apikey_done.png)Click **+ New API Key**, give it a name, check the role **Readonly** and click **Create**
+Click **New API Key**, fill a name of your API Key \(e.g. CatVision.io API Key\), click **Create**
+
+![](/assets/cvio_add_apikey.png)
+
+![CatVision.io Add App Menu](assets/cvio_add_apikey_done.png)
 
 * Copy and save the generated API key
 
