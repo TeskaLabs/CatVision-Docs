@@ -1,4 +1,4 @@
-### Create an CatVision.io API key
+### Create a CatVision.io API key
 
 The CatVision.io **API Key** identifies your mobile application and link it to your product registered in CatVision.io. The API key consists of two parts. **Secret API Key** and **API Key ID**. Secret API Key is a non-public, sensitive information and you have to keep it in the secret. The Secret API Key is not stored at CatVision.io web portal. API Key ID is a public information.  The **API Key** is used for _CatVision.io SDK_ and for the _CatVision.io Display_.
 
