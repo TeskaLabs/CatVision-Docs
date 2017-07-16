@@ -1,18 +1,18 @@
 # Add CatVision.io Display into your web application
 
-At this point you have your application equipped with the **CatVision SDK** and you have **created an API key** at [catvision.io](https://catvision.io). Now you will add the CatVision Display component to your web application.
+At this point you have your application equipped with the **CatVision.io SDK for Android** and you have **created an API key** at [app.catvision.io](https://app.catvision.io). Now you will add the CatVision Display component to your web application.
 
-## Get auth token from CatVision.io
+## Get an auth token from app.catvision.io
 
 The CatVision Display component needs a time limited auth token to authorize. Your **web application backend** will use your **Secret API key** \(`SECRET_API_KEY`\) to fetch the token.
 
-Here is an example of how to fetch the token from CatVision.io using some of the popular languages. The endpoint to be called is the following: `https://catvision.io/api/authtoken`. You need to add the `[SECRET_API_KEY]` in header `X-SC-SecretAPIKey`.
+Here is an example of how to fetch the token from [app.catvision.io](https://app.catvision.io) API using some of the popular languages. The endpoint to be called is the following: `https://app.catvision.io/api/authtoken`. You need to add the `[SECRET_API_KEY]` in header `X-SC-SecretAPIKey`.
 
 ### PHP
 
 ```php
 <?php
-$url = 'https://catvision.io/api/authtoken';
+$url = 'https://app.catvision.io/api/authtoken';
 $secret_api_key = '[SECRET_API_KEY]';
 $options = array(
     'http' => array(
@@ -31,7 +31,7 @@ $auth_token = $obj->{'auth_token'};
 
 ```py
 import requests, json
-r = requests.post('https://catvision.io/api/authtoken', headers={
+r = requests.post('https://app.catvision.io/api/authtoken', headers={
     'X-SC-SecretAPIKey' : '[SECRET_API_KEY]'
 })
 res = json.loads(r.text)
