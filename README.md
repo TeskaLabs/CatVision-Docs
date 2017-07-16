@@ -6,7 +6,7 @@ Users of a mobile application equipped by CatVision.io can get a real-time onlin
 
 Customer or technical support uses a web browser to display a shared screen of the mobile device and control the app remotely. They can use the [CatVision.io](https://app.catvision.io/) web portal or a _CatVision.io Display_ integrated to their common tools such as CRM.
 
-CatVision.io SDK for Android OS requires a version [5.0](https://developer.android.com/about/versions/android-5.0.html) and more \(minimum API level 21\).
+CatVision.io SDK for Android requires an minimum Android OS version [5.0](https://developer.android.com/about/versions/android-5.0.html) \(minimum API level 21\).
 
 _CatVision.io SDK for iOS is currently in closed beta and will be publicly released soon._
 
@@ -17,3 +17,6 @@ Here is a step-by-step guidelines that gets you quickly up to speed with CatVisi
 1. [Get an CatVision.io API key](//get-started/api-key.md)
 2. [Add CatVision.io SDK into your mobile app](//get-started/sdk-android.md)
 3. [Add CatVision.io Display into your web application](//get-started/display.md) \(optionally\)
+
+
+
