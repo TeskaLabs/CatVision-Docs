@@ -59,13 +59,29 @@ The manifest also needs to contain your _CatVision.io API Key ID_ so that the mo
 Go to `AndroidManifest.xml` of your mobile app and add a <meta-data android:name="cvio.api_key_id" ...` line:
 
 ```
-<application
+<manifest ...>
+   ...
+
+	<application
+
+		...
+		<meta-data android:name="cvio.api_key_id" android:value="[CatVision.io API Key ID]" />
+		...
+
+	</application>
+</manifest>
+```
+
+_Note:_ Make sure your application specifies an Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html)
+
+```
+<manifest ...>
 
 	...
-    <meta-data android:name="cvio.api_key_id" android:value="[CatVision.io API Key ID]" />
+    <uses-permission android:name="android.permission.INTERNET" />
     ...
 
-</application>
+</manifest>
 ```
 
 
