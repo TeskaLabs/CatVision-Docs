@@ -174,3 +174,7 @@ public class MyActivity extends Activity {
 
 Now you compile the application and launch it.
 Screen sharing function is ready.
+
+When screen sharing is enabled, you should see the connected client at [app.catvision.io](https://app.catvision.io):
+
+![Android Application connected to CatVision.io](../assets/cvio_android_emulator_share.png)
