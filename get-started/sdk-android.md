@@ -28,7 +28,7 @@ CatVision.io SDK has to be initialized during an application startup. It is done
 
 Open a Java source file of your application class and add a `import com.teskalabs.cvio.CatVision;` line and also `CatVision.initialize(this);` line using following example:
 
-```
+``` java
 ...
 import com.teskalabs.cvio.CatVision;
 ...
@@ -58,23 +58,19 @@ The manifest also needs to contain your _CatVision.io API Key ID_ so that the mo
 
 Go to `AndroidManifest.xml` of your mobile app and add a <meta-data android:name="cvio.api_key_id" ...` line:
 
-```
-<manifest ...>
-   ...
+``` xml
+<application ...>
 
-	<application
+...
+<meta-data android:name="cvio.api_key_id" android:value="[CatVision.io API Key ID]" />
+...
 
-		...
-		<meta-data android:name="cvio.api_key_id" android:value="[CatVision.io API Key ID]" />
-		...
-
-	</application>
-</manifest>
+</application>
 ```
 
 _Note:_ Make sure your application specifies an Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html)
 
-```
+``` xml
 <manifest ...>
 
 	...
@@ -96,7 +92,7 @@ The application needs to implement start and stop actions of CatVision.io screen
 
 Add the following code to the Activity class:
 
-```
+``` java
 ...
 import com.teskalabs.cvio.CatVision;
 ...
