@@ -99,6 +99,7 @@ import com.teskalabs.cvio.CatVision;
 
 
 public class MyActivity extends Activity {
+
 	private CatVision catvision;
 
 	private final int menuItemStartScreenShareId = 1101;
@@ -139,23 +140,21 @@ public class MyActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		switch (item.getItemId()) {
-			
-			...
-
-			case menuItemStartScreenShareId:
-				catvision.requestStart(this, CATVISION_REQUEST_CODE);
-				return true;
-
-			case menuItemStopScreenShareId:
-				catvision.stop();
-				return true;
-
-			...
-
-			default:
-				return super.onOptionsItemSelected(item);
+		...
+		
+		if (item.getItemId() == MENU_START_SCREEN_SHARE) {
+			catvision.requestStart(this, CATVISION_REQUEST_CODE);
+			return true;
 		}
+
+		else if (item.getItemId() == MENU_STOP_SCREEN_SHARE) {
+			catvision.stop();
+			return true;
+		}
+
+		...
+
+		return super.onOptionsItemSelected(item);
 	}
 
 	...
