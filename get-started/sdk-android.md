@@ -2,171 +2,164 @@
 
 In this section we describe how to integrate a CatVision.io SDK into an Android application.
 
+
 ## Prerequisities
 
-* Android 5.0 \(API level 21\) or newer
-* Access to source code of the mobile application
+* A source code of the Android application
 * Android Studio
-* CatVision.io API Key ID (see [Catvision.io API Key](//get-started/api-key.md))
+* _CatVision.io API Key ID_ (see [Catvision.io API Key](//get-started/api-key.md))
+* Android 5.0 \(API level 21\) or newer
+* An Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html)
 
-## Dependency
+## Add a CatVision.io SDK dependency
 
-Download the [**CatVision SDK**](http://get.catvision.io/CatVision_Android_v1705-release.aar) and put it in `./example-project/example/aars`
+Insert a following line into `dependencies` section of your Android application `build.gradle` and press 'Sync Now'. It will download an _CatVision.io SDK_ from [JCenter](https://bintray.com/teskalabs/CatVision.io/catvision-io-sdk-android) and integrate that with the app.
 
-```
-$ cd /path/to/example-project/example
-$ mkdir aars 
-$ cd aars
-$ wget http://get.catvision.io/CatVision_Android_v1705-release.aar
-```
+	compile 'com.teskalabs.cvio:catvision-io-sdk-android:v1707'
 
-In the application's `build.gradle` add a `flatDir` repository and set up dependencies:
+![Add CatVision.io SDK dependency via Android Studio](../assets/cvio_android_studio_dependencies.png)
 
-```
-repositories {
-    jcenter()
-    flatDir {
-        dirs 'aars'
-    }
-}
-dependencies {
-    ...
-    compile(name: "cvio-v1705-rc.1-release", ext:"aar")
-}
-```
+The CatVision.io SDK is now added to your Android application.
 
-You may wnat to **Sync project** and **Clean project**. It is needed in order to reload paths in Android Studio after you update dependencies or other Gradle file settings.
 
-## Initialize
+## Initialization
 
-We need to create an `Application` object where we will initialize `CatVision` in the application object's `onCreate()` lifecycle method.
+CatVision.io SDK has to be initialized during an application startup. It is done by adding an initialization code into a `onCreate()` method of an `Application` class.
+
+Open a Java source file of your application class and add a `import com.teskalabs.cvio.CatVision;` line and also `CatVision.initialize(this);` line using following example:
 
 ```
+...
 import com.teskalabs.cvio.CatVision;
+...
 
-public class ExampleApp extends Application
+public class MyApplication extends Application
 {
+	...
+
     @Override
     public void onCreate()
     {
         super.onCreate();
+
+        ...
         CatVision.initialize(this);
+        ...
     }
-}
-```
 
-In order to get this to work we need to tell the `AndroidManifest.xml` we are implementing a custom Application object and that the use of `android.permission.INTERNET` is requested. The manifest also needs to contain our `[API_KEY_ID]` so that the application gets attached to your Product at [catvision.io](https://catvision.io).
+	...
 
 ```
-<uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+The manifest also needs to contain your _CatVision.io API Key ID_ so that the mobile application identifies correctly to a [app.catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
+
+
+Go to `AndroidManifest.xml` of your mobile app and add a <meta-data android:name="cvio.api_key_id" ...` line:
+
+```
 <application
-    ...
-    android:name=".ExampleApp">
 
-    <meta-data android:name="cvio.api_key_id" android:value="[API_KEY_ID]" />
+	...
+    <meta-data android:name="cvio.api_key_id" android:value="[CatVision.io API Key ID]" />
     ...
 
 </application>
 ```
 
-Wherever we will need to call CatVision methods, we can simply get an instance of CatVision like this:
+
+![CatVision.io API Key ID is added to AndroidManifest.xml](../assets/cvio_android_studio_manifest.png)
+
+Now your application is properly integrated with CatVision.io SDK.
+
+
+## Start a screen sharing
+
+The application needs to implement start and stop actions of CatVision.io screen sharing. In this example we are going to implement start and stop buttons in the options menu.
+
+Add the following code to the Activity class:
 
 ```
-CatVision catvision = CatVision.getInstance();
-```
+...
+import com.teskalabs.cvio.CatVision;
+...
 
-So let us get an instance of `CatVision` after our Main Activity is created
 
-```
-public class MainActivity extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getName();
-    private CatVision catvision;
+public class MyActivity extends Activity {
+	private CatVision catvision;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+	private final int menuItemStartScreenShareId = 1101;
+	private final int menuItemStopScreenShareId = 1102;
+	private final int CATVISION_REQUEST_CODE = 1103;
 
-        catvision = CatVision.getInstance();
-    }
-    ...
-}
-```
+	...
 
-## Application Instance Identification - _Client Handle_
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
 
-**Client Handle** is a unique application instance identificator. You need to identify your running application instance so that you can specify which instance to connect to with CatVision Display component in your web application.
+		...
+		// Obtain a CatVision.io SDK reference
+		catvision = CatVision.getInstance();
+		...
 
-Whenever you are ready to create an identification for the running application instance you must do so with the following call.
+	}
 
-```
-catvision.setClientHandle(CatVision.DEFAULT_CLIENT_HANDLE);
-```
+	...
 
-A _Handle_ called **Client Tag** \(looks like `[GMYDQMRQGIYGCMBS]`\) is automatically created for you and after you call `setClientHandle` you can find new record in your Product's clients list at [catvision.io](https://catvision.io). However you are encouraged to generate and specify your own client handle.
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu)
+	{
+		menu.clear();
+		int menuGroup1Id = 1100;
 
-To tell CatVision that except for the default handle you use your own client handle simply replace the default client handle with your own:
+		if (!catvision.isStarted()) {
+			menu.add(menuGroup1Id, menuItemStartScreenShareId, 1, "Share screen");
+		} else {
+			menu.add(menuGroup1Id, menuItemStopScreenShareId, 1, "Stop sharing");
+		}
 
-```
-String customClientHandle = generateHandle();
-catvision.setClientHandle(customClientHanlde);
-```
+		return super.onPrepareOptionsMenu(menu);
+	}
 
-> See the [TeskaLabs Identity Management docs](https://www.teskalabs.com/docs/intro/identity-management) for more information regarding indentification of an application instance
+	...
 
-## Capture the screen
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		switch (item.getItemId()) {
+			
+			...
 
-We are going to implement start and stop capture buttons in the options menu. Add the following code to the Main Activity class. It will ensure that the start button is only present when CatVision screen capture isn't already active - and vice versa with the stop capture option.
+			case menuItemStartScreenShareId:
+				catvision.requestStart(this, CATVISION_REQUEST_CODE);
+				return true;
 
-```
-private final int menuItemStartCaptureId = 1;
-private final int menuItemStopCaptureId = 2;
+			case menuItemStopScreenShareId:
+				catvision.stop();
+				return true;
 
-@Override
-public boolean onPrepareOptionsMenu(Menu menu)
-{
-    menu.clear();
-    int menuGroup1Id = 1;
-    if (catvision.isStarted()) {
-        menu.add(menuGroup1Id, menuItemStopCaptureId, 1, "Stop capture");
-    } else {
-        menu.add(menuGroup1Id, menuItemStartCaptureId, 1, "Start capture");
-    }
-    return super.onPrepareOptionsMenu(menu);
-}
-```
+			...
 
-Now we implement click listeners and we will request start of CatVision screen capture when start button is clicked. First add `private int CATVISION_REQUEST_CODE = 100;` to the Main Activity class so that we can reuse that. Then add the following:
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
 
-```
-@Override
-public boolean onOptionsItemSelected(MenuItem item)
-{
-    switch (item.getItemId()) {
-        case menuItemStartCaptureId:
-            catvision.requestStart(this, CATVISION_REQUEST_CODE);
-             return true;
+	...
 
-        case menuItemStopCaptureId:
-            catvision.stop();
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-    }
-}
-```
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == CATVISION_REQUEST_CODE) {
+			catvision.onActivityResult(this, resultCode, data);
+			return;
+		}
+		
+		super.onActivityResult(requestCode, resultCode, data);
+	}
 
-Now when start button is clicked, Android will ask user to confirm that screen can be captured. We have to wait for the result of the user's decision in `onActivityResult`.
 
 ```
-@Override
-protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    if (requestCode == CATVISION_REQUEST_CODE) {
-        catvision.onActivityResult(this, resultCode, data);
-    }
-}
-```
 
-The screen is now captured and available for connection via CatVision Display component.
-
+Now you compile the application and launch it.
+Screen sharing function is ready.
