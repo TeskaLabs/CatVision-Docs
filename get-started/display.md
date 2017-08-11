@@ -12,9 +12,11 @@ Prior jumping to code, here is a brief intro into how _CatVision.io Display_ wor
 
 ![Add CatVision.io SDK dependency via Android Studio](../assets/cvio_display_arch.png)
 
-## 0. Generate Secret API Key
+## Prerequisities
 
-TODO ...
+ * _CatVision.io Secret API Key_ \(see [Catvision.io API Key](//get-started/api-key.md)\)
+
+_Security note: We recommend to generate a dedicated API Key for each CatVision.io Display and not to share it. If one API Key get compromised, only one integration will be affected._
 
 ## 1. Obtain the authorization token
 
