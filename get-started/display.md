@@ -58,6 +58,15 @@ res = json.loads(r.text)
 auth_token = res['auth_token']
 ```
 
+### curl
+
+```
+$ curl \
+	-H "X-SC-SecretAPIKey: [SECRET_API_KEY]" \
+	--data "" \
+	https://app.catvision.io/api/authtoken
+```
+
 ## 2. Include CatVision.io Display
 
 Load the CatVision.io Display component:
