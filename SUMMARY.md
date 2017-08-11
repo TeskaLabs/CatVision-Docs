@@ -1,6 +1,6 @@
 # Summary
 
-## CatVision
+## CatVision.io
 
 * [Introduction](/README.md)
 
