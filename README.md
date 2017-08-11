@@ -16,7 +16,5 @@ Here is a step-by-step guidelines that gets you quickly up to speed with CatVisi
 
 1. [Get an CatVision.io API key](//get-started/api-key.md)
 2. [Add CatVision.io SDK into your mobile app](//get-started/sdk-android.md)
-3. [Add CatVision.io Display into your web application](//get-started/display.md) \(optionally\)
-
-
+3. [Add CatVision.io Display into your web application](//get-started/display.md)
 
