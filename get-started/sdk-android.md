@@ -1,6 +1,6 @@
 # Adding a CatVision.io SDK into an Android app
 
-In this section we describe how to integrate a CatVision.io SDK into an Android application.
+In this section we describe how to integrate a CatVision.io SDK into an Android application so that an operator can access it remotely.
 
 ## Prerequisities
 
