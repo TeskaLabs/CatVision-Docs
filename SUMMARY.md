@@ -3,7 +3,6 @@
 ## CatVision
 
 * [Introduction](/README.md)
-* [Architecture](/architecture.md)
 
 ## Getting Started
 
@@ -11,5 +10,5 @@
 * [CatVision.io SDK for Android](/get-started/sdk-android.md)
 * [CatVision.io Display](/get-started/display.md)
 
-
-
+## Manual
+* [Architecture](/architecture.md)
