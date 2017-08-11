@@ -61,7 +61,7 @@ auth_token = res['auth_token']
 
 Load the CatVision.io Display component:
 
-```
+```html
 <head>
     ...
     <script type="text/javascript" src="https://cdn.teskalabs.com/cvio.min.js"></script>
@@ -87,6 +87,7 @@ This is, how you instantiate a CatVision Display and connect it to a remote clie
 
 ```html
 <canvas id='cviocanvas'>
+...
 <script type="text/javascript">
     var cvioDisplay = new CVIODisplay({
         target:       document.getElementById('cviocanvas'),
