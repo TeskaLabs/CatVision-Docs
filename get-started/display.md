@@ -20,13 +20,22 @@ _Security note: We recommend to generate a dedicated API Key for each CatVision.
 
 ## 1. Obtain the authorization token
 
-The _CatVision.io Display_ is authorized for remote access by a time limited `AUTHORIZATION_TOKEN`. This authorization token has to be obtained by _Operator Application Server_ (this is your application backend code) using _Secret API key_ \(`SECRET_API_KEY`\) from a _app.catvision.io_ API via a REST call. The authorization token is an opaque string.
+The _CatVision.io Display_ is authorized for remote access by a time limited `AUTHORIZATION_TOKEN`. This authorization token has to be obtained by _Operator Application Server_ (this is your application backend code) using _Secret API key_ \(`SECRET_API_KEY`\) from a _app.catvision.io_ API via a REST call. The authorization token is an opaque string. The authorization token is valid for XX minutes and the application has to obtain a new token after a timeout.
 
-*Note: The authorization token is valid for XX minutes and the application has to obtain a new token after a timeout.*
-
-
-Here is an example of how to fetch the authorization token using some of the popular languages. The relevant _app.catvision.io_ API endpoint is available at `https://app.catvision.io/api/authtoken`.  
+The relevant _app.catvision.io_ API endpoint is available at `https://app.catvision.io/api/authtoken`.  
 You need to provide the `[SECRET_API_KEY]` in an HTTP header item `X-SC-SecretAPIKey`.
+
+The example of a response in JSON format from `https://app.catvision.io/api/authtoken`:  
+
+```json
+{
+    "auth_token": "88e52eebd7c992b3e95597596996e693_1502538423.52.61d94fb4b845b8b25181fd1b375513905c61f5a80e706481eb052fc6",
+    "ok": 1
+}
+```
+
+
+Here is an example of how to fetch the authorization token using some of the popular languages.
 
 ### PHP
 
