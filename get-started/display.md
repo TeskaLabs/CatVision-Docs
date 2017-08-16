@@ -92,7 +92,7 @@ Load the _CatVision.io Display_ component:
 ```html
 <head>
     ...
-    <script type="text/javascript" src="https://get.catvision.io/cvio.min.js"></script>
+    <script type="text/javascript" src="https://app.catvision.io/get/cvio.min.js"></script>
     ...
 </head>
 ```
