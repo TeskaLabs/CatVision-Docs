@@ -15,7 +15,7 @@ In this section we describe how to integrate a CatVision.io SDK into an Android 
 Insert a following line into `dependencies` section of your Android application `build.gradle` and press 'Sync Now'. It will download an _CatVision.io SDK_ from [JCenter](https://bintray.com/teskalabs/CatVision.io/catvision-io-sdk-android) and integrate it into the app source code.
 
 ```
-compile 'com.teskalabs.cvio:catvision-io-sdk-android:v1707-1'
+compile 'com.teskalabs.cvio:catvision-io-sdk-android:+'
 ```
 
 ![Add CatVision.io SDK dependency via Android Studio](../assets/cvio_android_studio_dependencies.png)
