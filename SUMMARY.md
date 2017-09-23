@@ -12,3 +12,4 @@
 
 ## Manual
 * [Architecture](/architecture.md)
+* [FAQ](/faq.md)
