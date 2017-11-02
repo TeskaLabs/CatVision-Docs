@@ -9,6 +9,7 @@ In this section we describe how to integrate a CatVision.io SDK into an Android 
 * _CatVision.io API Key ID_ \(see [Catvision.io API Key](//get-started/api-key.md)\)
 * Android 5.0 \(API level 21\) or newer
 * An Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html)
+* An Android permission `android.permission.ACCESS_NETWORK_STATE` to [access information about networks](https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_NETWORK_STATE)
 
 ## Add a CatVision.io SDK dependency
 
@@ -64,21 +65,22 @@ Open `AndroidManifest.xml` file of your Android app and add a `<meta-data androi
 </application>
 ```
 
-_Note:_ Make sure your application specifies an Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html)
+![CatVision.io API Key ID is added to AndroidManifest.xml](../assets/cvio_android_studio_manifest.png)
+
+## Android permissions
+
+Make sure your application specifies an Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html) and Android permission `android.permission.ACCESS_NETWORK_STATE` [access information about networks](https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_NETWORK_STATE).
 
 ```xml
 <manifest ...>
 
     ...
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     ...
 
 </manifest>
 ```
-
-![CatVision.io API Key ID is added to AndroidManifest.xml](../assets/cvio_android_studio_manifest.png)
-
-Congratulations! Now your application is integrated with CatVision.io SDK.
 
 ## Start a screen sharing
 
