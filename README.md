@@ -1,6 +1,6 @@
 # CatVision.io
 
-![CatVision.io Logo](./assets/catvision-logo.png)
+![](/assets/catvision-logo-03.png)
 
 CatVision.io is a product that provides an easy and secure remote access to a screen of your mobile application aka the screen share and/or a remote control of the mobile application.
 
@@ -18,11 +18,11 @@ Here is a step-by-step guidelines that gets you quickly up to speed with CatVisi
 
 1. [Get an CatVision.io API key](//get-started/api-key.md)
 2. [Add CatVision.io SDK into your Android app](//get-started/sdk-android.md)
-3. [Add CatVision.io Display into your web application](//get-started/display.md) (optionally)
-
+3. [Add CatVision.io Display into your web application](//get-started/display.md) \(optionally\)
 
 ## Product of TeskaLabs
 
 CatVision.io is a product of [TeskaLabs](https://www.teskalabs.com).
 
 ![TeskaLabs](./assets/teskalabs-logo.png)
+
