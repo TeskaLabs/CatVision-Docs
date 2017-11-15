@@ -10,7 +10,7 @@ Customer or technical support uses a web browser to display a shared screen of t
 
 CatVision.io SDK for Android requires an minimum Android OS version [5.0](https://developer.android.com/about/versions/android-5.0.html) \(minimum API level 21\).
 
-_CatVision.io SDK for iOS is currently in closed beta and will be publicly released soon._
+_CatVision.io SDK for iOS is currently in closed beta and will be publicly released soon. Contact us for more information._
 
 ## Quick Start
 
