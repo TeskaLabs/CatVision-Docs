@@ -3,7 +3,6 @@
 ## CatVision.io
 
 * [Introduction](/README.md)
-* [Support](support.md)
 
 ## Getting Started
 
@@ -13,6 +12,7 @@
 
 ## Manual
 
+* [Support](support.md)
 * [Architecture](/architecture.md)
 * [FAQ](/faq.md)
 
