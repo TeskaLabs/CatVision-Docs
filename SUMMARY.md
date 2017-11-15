@@ -12,6 +12,7 @@
 
 ## Manual
 
+* [Use Cases](use-cases.md)
 * [Support](support.md)
 * [Architecture](/architecture.md)
 * [FAQ](/faq.md)
