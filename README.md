@@ -1,4 +1,4 @@
-# CatVision.io
+# Welcome to CatVision.io manual
 
 ![](/assets/catvision-logo-03.png)
 
