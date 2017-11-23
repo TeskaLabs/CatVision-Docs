@@ -28,5 +28,5 @@ Are you interested in using CatVision.io?
 
 For successful implementation of CatVision.io you will need a software developer. Just invite him to your Product. He will find everything required for implementation in our [Documentation](//README.md).
 
-Or, we could do it for you! We are sure we will find common ground and understanding. [Write us an email](mailto:team@catvision.io).
+Or, we could do it for you! [Write us an email](mailto:team@catvision.io).
 
