@@ -12,6 +12,7 @@
 
 ## Manual
 
+* [For non-developers](for-non-developers.md)
 * [Support](support.md)
 * [Architecture](/architecture.md)
 * [FAQ](/faq.md)
