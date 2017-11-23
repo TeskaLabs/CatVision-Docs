@@ -3,6 +3,7 @@
 ## CatVision.io
 
 * [Introduction](/README.md)
+* [For Non-Developers](non-developer-working-name.md)
 
 ## Getting Started
 
