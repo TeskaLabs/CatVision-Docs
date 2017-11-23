@@ -18,8 +18,8 @@
 
 ## Examples of use
 
-* [Point of Sales Systems](examples-of-use/point-of-sales-systems.md)
+* [POS Systems](examples-of-use/point-of-sales-systems.md)
 * [Meeting Room App](examples-of-use/meeting-room-applications.md)
 * [Self-service Kiosks](examples-of-use/self-service-kiosks.md)
-* [Workforce Management Apps & BYOD support](examples-of-use/workforce-management-apps-and-byod-support.md)
+* [WMA & BYOD support](examples-of-use/workforce-management-apps-and-byod-support.md)
 
