@@ -1,6 +1,6 @@
 # What is the purpose of CatVision.io?
 
-It is straightforward.
+It is simple!
 
 To help your business grow. And how? By providing you best tool for remote support of your mobile apps and devices!
 
