@@ -8,7 +8,7 @@ CatVision.io is an SDK, a few lines of code, which opens you a door for remote a
 
 With CatVision.io SDK implemented in a mobile application you will save time and money which you would have spent for travelling to the physical locations, while still providing users with all the support they need.
 
-# How can you use CatVision.io?
+# How to use CatVision.io?
 
 Let's take a look at few use cases.
 
