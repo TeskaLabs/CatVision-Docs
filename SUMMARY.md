@@ -13,7 +13,7 @@
 ## Manual
 
 * [Support](support.md)
-* [For Non-Developers](non-developer-working-name.md)
+* [Non-Developers](non-developer-working-name.md)
 * [Architecture](/architecture.md)
 * [FAQ](/faq.md)
 
