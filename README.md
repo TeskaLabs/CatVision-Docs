@@ -12,6 +12,7 @@ CatVision.io SDK for Android requires an minimum Android OS version [5.0](https:
 
 _CatVision.io SDK for iOS is currently in closed beta and will be publicly released soon. _[_Contact us_](mailto:team@catvision.io)_ for more information._
 
+
 ## Quick Start
 
 Here is a step-by-step guidelines that gets you quickly up to speed with CatVision.io:
@@ -19,6 +20,12 @@ Here is a step-by-step guidelines that gets you quickly up to speed with CatVisi
 1. [Get an CatVision.io API key](//get-started/api-key.md)
 2. [Add CatVision.io SDK into your Android app](//get-started/sdk-android.md)
 3. [Add CatVision.io Display into your web application](//get-started/display.md) \(optionally\)
+
+
+## Support
+
+If you have any question or trouble, please chat with our [support team](https://tawk.to/chat/5978bc920d1bb37f1f7a5f6a/default/?$_tawk_popout=true) online or drop us an email at [team@catvision.io](mailto:team@catvision.io). We are ready to help you and we typically respond within minutes.
+
 
 ## Product of TeskaLabs
 
