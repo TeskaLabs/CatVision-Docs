@@ -1,7 +1,8 @@
 # How to report an issue with CatVision.io
 
 Nothing is without issues, and when this occurs, we are here for you to help solve any problems with our product.
-Feel free to contact us via [Support chat](https://tawk.to/chat/5978bc920d1bb37f1f7a5f6a/default/?$_tawk_popout=true) or you can write us an email to [team@catvision.io](mailto:team@catvision.io). We are ready to help you.
+
+Feel free to contact us via [Support chat](https://tawk.to/chat/5978bc920d1bb37f1f7a5f6a/default/?$_tawk_popout=true) or you can write us an email to [team@catvision.io](mailto:team@catvision.io). We are ready to help you.
 
 
 ## Help us to solve your issue quickly
@@ -16,15 +17,16 @@ Thank you for your help in creating a better product!
 
 ### Where to find Client Tag?
 
-![Client tag in the list of clients](/assets/Screenshot 2017-11-15 12.51.23.png)
+![Client tag in the list of clients](/assets/cvio_client_tag_location_2.png)
 
 OR
 
-![Client tag in the detail of client](/assets/Screenshot 2017-11-15 12.51.29.png)
+![Client tag in the detail of client](/assets/cvio_client_tag_location_1.png)
 
 ### Where to find Logcat in Android Studio?
 
-![LogCat in Android studio](/assets/Pasted image at 2017_11_15 11_57 AM %281%29.png)
+![LogCat in Android studio](/assets/cvio_android_studio_logcat.png)
+
 
 
 
