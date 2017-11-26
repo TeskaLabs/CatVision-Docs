@@ -12,10 +12,9 @@
 
 ## Manual
 
-* [Support](support.md)
-* [Non-Developers](non-developer-working-name.md)
-* [Architecture](/architecture.md)
+* [Reporting issues](support.md)
 * [FAQ](/faq.md)
+* [Architecture](/architecture.md)
 
 ## Examples of use
 
