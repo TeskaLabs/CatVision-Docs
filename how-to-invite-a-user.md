@@ -1,4 +1,4 @@
-# How to invite a colleague to your product
+# How to invite a user to CatVision.io
 
 When you need a colleague or friend to join you at CatVision.io, there is a simple way how to do that. Let us show you how to do it, with pictures!
 
