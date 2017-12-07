@@ -1,7 +1,6 @@
 # How to invite a colleague to your product
 
-When you need a colleague or friend to join you at CatVision.io,  
-there is a simple way how to do that. Let us show you how to do it, with pictures!
+When you need a colleague or friend to join you at CatVision.io, there is a simple way how to do that. Let us show you how to do it, with pictures!
 
 1. Locate product menu![](/assets/cvio_invite_1.png)
 2. Choose Users![](/assets/cvio_invite_2.png)
