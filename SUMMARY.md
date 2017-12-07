@@ -13,6 +13,7 @@
 ## Manual
 
 * [Reporting issues](support.md)
+* [How to invite a user](how-to-invite-a-user.md)
 * [FAQ](/faq.md)
 * [Architecture](/architecture.md)
 
