@@ -1,10 +1,8 @@
 # What is the purpose of CatVision.io?
 
-It is straightforward.
+It is simple!
 
 To help your business grow. And how? By providing you best tool for remote support of your mobile apps and devices!
-
-CatVision.io is an SDK, a few lines of code, which opens you a door for remote access and instant screen sharing. Powerful customer support tool \(for example\), don't you think?
 
 With CatVision.io SDK implemented in a mobile application you will save time and money which you would have spent for travelling to the physical locations, while still providing users with all the support they need.
 
