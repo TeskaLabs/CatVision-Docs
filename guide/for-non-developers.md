@@ -1,6 +1,6 @@
 ## Welcome to non-dev guide!
 
-As you know, CatVision.io is a developer kit, so you need a software developer for successful implementation. But before you invite him to check this out, stay with us little longer, we want to tell you something.
+As you know, CatVision.io is a developer kit, so you need a software developer for successful implementation. But before you [invite ](/guide/invitation.md "How to invite...")him to check this out, stay with us little longer, we want to tell you something.
 
 ## What is the purpose of CatVision.io?
 
@@ -28,7 +28,7 @@ Do you have in mind something different? [Contact us](mailto:team@catvision.io),
 
 Are you interested in using CatVision.io?
 
-For successful implementation of CatVision.io you will need a software developer. Just invite him to your Product. He will find everything required for implementation in our [Documentation](//README.md).
+For successful implementation of CatVision.io you will need a software developer. Just [invite ](/guide/invitation.md "How to invite...")him to your Product. He will find everything required for implementation in our [Documentation](//README.md).
 
 Or, we could do it for you! [Write us an email](mailto:team@catvision.io).
 
