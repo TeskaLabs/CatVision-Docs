@@ -1,12 +1,16 @@
-# What is the purpose of CatVision.io?
+## Welcome to non-dev guide!
+
+As you know, CatVision.io is a developer kit, so you need a developer for successful implementation. But before you invite him to check this out, stay with us little longer, we want to tell you something. 
+
+## What is the purpose of CatVision.io?
 
 It is simple!
 
-To help your business grow. And how? By providing you best tool for remote support of your mobile apps and devices!
+To help your business grow. And how? By providing you best tool for remote support of ye!our mobile apps and devices!
 
 With CatVision.io SDK implemented in a mobile application you will save time and money which you would have spent for travelling to the physical locations, while still providing users with all the support they need.
 
-# How can you use CatVision.io?
+## How can you use CatVision.io?
 
 Let's take a look at few use cases.
 
@@ -20,7 +24,7 @@ Let's take a look at few use cases.
 
 Do you have in mind something different? [Contact us](mailto:team@catvision.io), and we will find a way how to help you!
 
-# Let’s give it a test ride!
+## Let’s give it a test ride!
 
 Are you interested in using CatVision.io?
 
