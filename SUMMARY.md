@@ -15,6 +15,7 @@
 * [Reporting issues](support.md)
 * [How to invite a user to CatVision.io](how-to-invite-a-user.md)
 * [FAQ](/faq.md)
+* [Display resolution](display-resolution.md)
 * [Architecture](/architecture.md)
 
 ## Examples of use
