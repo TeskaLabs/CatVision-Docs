@@ -14,4 +14,4 @@ CatVision.io for Android uses [`DisplayMetrics.densityDpi`](https://developer.an
 | &lt; 400  | 2x   |
 | &gt;= 400 | 4x   |
 
-
+[Read  more about Android DPI ranges.](https://developer.android.com/guide/practices/screens_support.html#range)
