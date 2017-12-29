@@ -53,7 +53,7 @@ public class MyApplication extends Application
     ...
 ```
 
-The manifest also needs to contain your _CatVision.io API Key ID_ so that the application authenticates properly to a [app.catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
+The manifest needs to contain your _CatVision.io API Key ID_ so that the application authenticates properly to a [app.catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
 
 Open `AndroidManifest.xml` file of your Android app and add a `<meta-data android:name="cvio.api_key_id" ...>` line:
 
