@@ -1,4 +1,4 @@
-# Adding a CatVision.io SDK into an Android app
+# Adding a CatVision.io SDK into an Android application
 
 In this section we describe how to integrate a CatVision.io SDK into an Android application so that an operator can access it remotely.
 
@@ -7,11 +7,12 @@ In this section we describe how to integrate a CatVision.io SDK into an Android 
 * A source code of the Android application
 * Android Studio
 * _CatVision.io API Key ID_ \(see [Catvision.io API Key](//get-started/api-key.md)\)
-* Android 5.0 \(API level 21\) or newer
 * An Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html)
 * An Android permission `android.permission.ACCESS_NETWORK_STATE` to [access information about networks](https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_NETWORK_STATE)
 
-## Add a CatVision.io SDK dependency
+_Remark about Android version requirement:_ Android provides the screen capture functionality starting from API level 21 respective Android 5.0. CatVision.io SDK for Android can be integrated into applications targeting older Android versions, but screen sharing will not be functional.
+
+## Add a CatVision.io SDK
 
 Insert a following line into `dependencies` section of your Android application `build.gradle` and press 'Sync Now'. It will download an _CatVision.io SDK_ from [JCenter](https://bintray.com/teskalabs/CatVision.io/catvision-io-sdk-android) and integrate it into the app source code.
 
@@ -27,7 +28,8 @@ The CatVision.io SDK is now added to your Android application.
 
 CatVision.io SDK has to be initialized during an application start. It is done by adding an initialization one liner into a `onCreate()` method of an `Application` class.
 
-Open a Java source file of your application class and add a `import com.teskalabs.cvio.CatVision;` line and also `CatVision.initialize(this);` line.  See following example:
+Open a Java source file of your application class and add a `import com.teskalabs.cvio.CatVision;` line and `CatVision.initialize(this);` line.  
+See following example:
 
 ```java
 ...
@@ -172,3 +174,4 @@ When screen sharing is started in the mobile apps, you should see the connected 
 
 ![Android Application connected to CatVision.io](../assets/cvio_android_emulator_share.png)
 
+:
