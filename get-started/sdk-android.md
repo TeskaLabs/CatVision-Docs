@@ -140,12 +140,12 @@ public class MyActivity extends Activity {
     {
         ...
 
-        if (item.getItemId() == MENU_START_SCREEN_SHARE) {
-            catvision.requestStart(this, CATVISION_REQUEST_CODE);
+        if (item.getItemId() == menuItemStartScreenShareId) {
+            catvision.requestStart(this, menuItemStopScreenShareId);
             return true;
         }
 
-        else if (item.getItemId() == MENU_STOP_SCREEN_SHARE) {
+        else if (item.getItemId() == menuItemStopScreenShareId) {
             catvision.stop();
             return true;
         }
