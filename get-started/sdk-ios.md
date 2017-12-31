@@ -10,6 +10,8 @@ In this section we describe how to integrate a CatVision.io SDK into an iOS appl
 
 _Remark about iOS version requirement:_ Apple added a screen capturing functionality into iOS 11 \(autumn 2017\). Older versions of iOS do not support screen sharing.
 
+_Remark about a simulator:_ As of iOS 11.2, a screen capture is not enabled by Apple in the simulator. You get only a dark blue screen instead of the remote screen image.
+
 ## Add a CatVision.io SDK
 
 Download [CatVision.io SDK for iOS](https://www.catvision.io/get/CatVisionIO.framework.zip) and unzip downloaded ZIP archive. The archive contains `CatVisionIO.framework`.
@@ -42,7 +44,7 @@ Open a source code file of your application delegate, it typically called `AppDe
 
 See following example:
 
-```
+```objs
 ...
 #import <CatVisionIO/CatVisionIO.h>
 ...
@@ -72,91 +74,57 @@ Open `Info.plist` file of your iOS app and _add row_ from a context menu. The _K
 
 ## Start a screen sharing
 
-The application needs to implement start and stop actions of CatVision.io screen sharing. In this example we are going to implement start and stop buttons in the options menu.
+The application needs to implement start and stop actions of CatVision.io screen sharing. In this example we are going to implement the switch that controls a screen sharing function.
 
-Add the following code to the Activity class:
+Add a switch to a storyboard, its initial _State_ is **Off**.
 
-```java
+![Add a switch to a storyboard](../assets/cvio_ios_xcode_7.png)
+
+Add the following code to the ViewController header (.h):
+
+```objc
+@interface ViewController : ...
+
 ...
-import com.teskalabs.cvio.CatVision;
+@property (weak, nonatomic) IBOutlet UISwitch * ScreenShareSwitch;
 ...
 
+@end
 
-public class MyActivity extends Activity {
-
-    private CatVision catvision;
-
-    private final int menuItemStartScreenShareId = 1101;
-    private final int menuItemStopScreenShareId = 1102;
-    private final int CATVISION_REQUEST_CODE = 1103;
-
-    ...
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        ...
-        // Obtain a CatVision.io SDK reference
-        catvision = CatVision.getInstance();
-        ...
-
-    }
-
-    ...
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu)
-    {
-        menu.clear();
-        int menuGroup1Id = 1100;
-
-        if (!catvision.isStarted()) {
-            menu.add(menuGroup1Id, menuItemStartScreenShareId, 1, "Share screen");
-        } else {
-            menu.add(menuGroup1Id, menuItemStopScreenShareId, 1, "Stop sharing");
-        }
-
-        return super.onPrepareOptionsMenu(menu);
-    }
-
-    ...
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        ...
-
-        if (item.getItemId() == MENU_START_SCREEN_SHARE) {
-            catvision.requestStart(this, CATVISION_REQUEST_CODE);
-            return true;
-        }
-
-        else if (item.getItemId() == MENU_STOP_SCREEN_SHARE) {
-            catvision.stop();
-            return true;
-        }
-
-        ...
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    ...
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == CATVISION_REQUEST_CODE) {
-            catvision.onActivityResult(this, resultCode, data);
-            return;
-        }
-
-        super.onActivityResult(requestCode, resultCode, data);
-    }
 ```
 
-Screen sharing function is ready. You can compile the application now and start it.
+Link `ScreenShareSwitch` outlet with a Switch in a storyboard.
 
-When screen sharing is started in the mobile apps, you should see the connected client at [app.catvision.io](https://app.catvision.io):
+Add the following code to the ViewController implementation class (.m):
 
-![Android Application connected to CatVision.io](../assets/cvio_android_emulator_share.png)
+```objc
+...
+#import <CatVisionIO/CatVisionIO.h>
+...
 
+@implementation ViewController
+
+...
+@synthesize ScreenShareSwitch;
+...
+
+...
+- (IBAction)onScreenShareSwitchValueChanged:(id)sender {
+    if ([ScreenShareSwitch isOn]) {
+        [[CatVision sharedInstance] start];
+    }
+    else {
+        [[CatVision sharedInstance] stop];
+    }
+}
+...
+
+@end
+
+```
+
+Link `onScreenShareSwitchValueChanged` method with a Switch _Value Changed_ event. Screen sharing is ready. You can compile the application now and run the app.
+
+When screen sharing is started in the mobile apps, you will see the connected client at [app.catvision.io](https://app.catvision.io):
+
+![Add CatVision.io SDK in XCode as a Embedded Binary, step 5](../assets/cvio_ios_done.png)
