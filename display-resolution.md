@@ -4,6 +4,7 @@ CatVision.io tries to automatically choose optimal screen resolution of a remote
 
 The image of a captured screen is typically downscaled by 2x or 4x because modern smartphones are using subpixel resolutions with very high DPIs. However, CatVision.io SDK can be configured to use other downscale value, including 1 or even &lt;1. It is highly recommended for performance reasons to choose integer values of downscale factor.
 
+
 ## Android
 
 CatVision.io for Android uses [`DisplayMetrics.densityDpi`](https://developer.android.com/reference/android/util/DisplayMetrics.html#densityDpi) to determine a downscale factor of the remote display.
@@ -15,3 +16,10 @@ CatVision.io for Android uses [`DisplayMetrics.densityDpi`](https://developer.an
 | &ge; 400  | 3x   |
 
 [Read  more about Android DPI ranges.](https://developer.android.com/guide/practices/screens_support.html#range)
+
+
+## iOS
+
+CatVision.io for iOS uses [UIScreen
+ scale](https://developer.apple.com/documentation/uikit/uiscreen/1617836-scale) property directly as a downscale factor.
+
