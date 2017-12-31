@@ -12,7 +12,7 @@ _Remark about iOS version requirement:_ Apple added a screen capturing functiona
 
 ## Add a CatVision.io SDK
 
-Download [CatVision.io SDK for iOS](https://www.catvision.io/get/CatVisionIO.framework.zip) and unzip downloaded ZIP archive. The archive contains `CatVisionIO.framework `. 
+Download [CatVision.io SDK for iOS](https://www.catvision.io/get/CatVisionIO.framework.zip) and unzip downloaded ZIP archive. The archive contains `CatVisionIO.framework`.
 
 ![Unzip downloaded CatVision.io SDK for iOS](../assets/cvio_ios_download.png)
 
@@ -64,9 +64,9 @@ Now your app should look like this:
 
 ![Add CatVision.io SDK in XCode as a Embedded Binary, step 5](../assets/cvio_ios_xcode_5.png)
 
-The _information property list file_ \(or `Info.plist` for short\) of the iOS app needs to contain your _CatVision.io API Key ID_ so that the application authenticates properly to a [app.catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
+_CatVision.io API Key ID _has to be added into the _information property list file_ \(or `Info.plist` for short\) of the iOS app so that the application authenticates properly to [catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
 
-Open `Info.plist` file of your iOS app and _add row_ from a context menu. A _Key_ is `CVIOApiKeyId`, type is a String and a value is the _CatVision.io API Key ID_.
+Open `Info.plist` file of your iOS app and _add row_ from a context menu. The _Key_ is `CVIOApiKeyId`, the type is a String and the value is the _CatVision.io API Key ID_.
 
 ![Add CatVision.io SDK in XCode as a Embedded Binary, step 5](../assets/cvio_ios_xcode_6.png)
 
