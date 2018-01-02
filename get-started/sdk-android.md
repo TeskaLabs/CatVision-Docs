@@ -7,14 +7,12 @@ In this section we describe how to integrate a CatVision.io SDK into an Android 
 * A source code of the Android application
 * Android Studio
 * _CatVision.io API Key ID_ \(see [Catvision.io API Key](//get-started/api-key.md)\)
-* An Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html)
-* An Android permission `android.permission.ACCESS_NETWORK_STATE` to [access information about networks](https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_NETWORK_STATE)
 
 _Remark about Android version requirement:_ Android provides the screen capture functionality starting from API level 21 respective Android 5.0. CatVision.io SDK for Android can be integrated into applications targeting older Android versions, but screen sharing will not be functional.
 
-## Add a CatVision.io SDK
+## Add the CatVision.io SDK
 
-Insert a following line into `dependencies` section of your Android application `build.gradle` and press 'Sync Now'. It will download an _CatVision.io SDK_ from [JCenter](https://bintray.com/teskalabs/CatVision.io/catvision-io-sdk-android) and integrate it into the app source code.
+Insert a following line into `dependencies` section of your Android application `build.gradle` and press 'Sync Now'. Android Studio will automatically download an _CatVision.io SDK_ from [JCenter](https://bintray.com/teskalabs/CatVision.io/catvision-io-sdk-android) and integrate it into the application source code.
 
 ```
 compile 'com.teskalabs.cvio:catvision-io-sdk-android:+'
@@ -24,38 +22,11 @@ compile 'com.teskalabs.cvio:catvision-io-sdk-android:+'
 
 The CatVision.io SDK is now added to your Android application.
 
-## Initialization
+## Add the CatVision.io API Key ID
 
-CatVision.io SDK has to be initialized during an application start. It is done by adding an initialization one liner into a `onCreate()` method of an `Application` class.
+_CatVision.io API Key ID_ has to be added into the _App Manifest_ \(or `AndroidManifest.xml`\) of the Android app so that the application authenticates properly to [catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
 
-Open a Java source file of your application class and add a `import com.teskalabs.cvio.CatVision;` line and `CatVision.initialize(this);` line.  
-See following example:
-
-```java
-...
-import com.teskalabs.cvio.CatVision;
-...
-
-public class MyApplication extends Application
-{
-    ...
-
-    @Override
-    public void onCreate()
-    {
-        super.onCreate();
-
-        ...
-        CatVision.initialize(this);
-        ...
-    }
-
-    ...
-```
-
-The manifest needs to contain your _CatVision.io API Key ID_ so that the application authenticates properly to a [app.catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
-
-Open `AndroidManifest.xml` file of your Android app and add a `<meta-data android:name="cvio.api_key_id" ...>` line:
+Open `AndroidManifest.xml` file of your Android app and add a `<meta-data android:name="cvio.api_key_id" ...>` line into `<application>` tag:
 
 ```xml
 <application ...>
@@ -69,20 +40,6 @@ Open `AndroidManifest.xml` file of your Android app and add a `<meta-data androi
 
 ![CatVision.io API Key ID is added to AndroidManifest.xml](../assets/cvio_android_studio_manifest.png)
 
-## Android permissions
-
-Make sure your application specifies an Android permission `android.permission.INTERNET` to [perform network operations](https://developer.android.com/training/basics/network-ops/connecting.html) and Android permission `android.permission.ACCESS_NETWORK_STATE` [access information about networks](https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_NETWORK_STATE).
-
-```xml
-<manifest ...>
-
-    ...
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    ...
-
-</manifest>
-```
 
 ## Start a screen sharing
 
@@ -111,7 +68,7 @@ public class MyActivity extends Activity {
 
         ...
         // Obtain a CatVision.io SDK reference
-        catvision = CatVision.getInstance();
+        catvision = CatVision.getInstance(this);
         ...
 
     }
@@ -174,4 +131,3 @@ When screen sharing is started in the mobile apps, you should see the connected 
 
 ![Android Application connected to CatVision.io](../assets/cvio_android_emulator_share.png)
 
-:
