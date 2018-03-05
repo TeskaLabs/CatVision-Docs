@@ -8,6 +8,11 @@ Customer or technical support uses a web browser to display a shared screen of t
 
 ![CatVision.io logo](./assets/catvision-logo-03.png)
 
+## CatVision.io App
+
+Now you can try CatVision.io SDK for Android before actual implementation, already SDK-equipped app is available on Google Play. 
+
+&lt;a href="https://play.google.com/store/apps/details?id=io.catvision.appl&amp;hl=en&amp;ah=w4CyTRg17aiaKAzNpPwG5eYZqts&amp;utm\_source=blog&amp;pcampaignid=tl1802\_appRelease" target="\_blank"&gt;&lt;img alt="Get it on Google Play" src="google-play-badge.png"&gt;&lt;/a&gt;&lt;/div&gt;
 
 ## Quick Start
 
@@ -17,11 +22,9 @@ Here is a step-by-step guidelines that gets you quickly up to speed with CatVisi
 2. Add CatVision.io SDK into your [Android app](//get-started/sdk-android.md) or [iOS app](//get-started/sdk-ios.md)
 3. [Add CatVision.io Display into your web application](//get-started/display.md) \(optionally\)
 
-
 ## Support
 
 If you have any question or trouble, please chat with our [support team](https://tawk.to/chat/5978bc920d1bb37f1f7a5f6a/default/?$_tawk_popout=true) online or drop us an email at [team@catvision.io](mailto:team@catvision.io). We are ready to help you and we typically respond within minutes.
-
 
 ## Product of TeskaLabs
 
