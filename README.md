@@ -12,7 +12,7 @@ Customer or technical support uses a web browser to display a shared screen of t
 
 Now you can try CatVision.io SDK for Android before actual implementation, already SDK-equipped app is available on Google Play.
 
-
+[![](/assets/google_play_badge.png)](https://play.google.com/store/apps/details?id=io.catvision.appl&hl=en&ah=w4CyTRg17aiaKAzNpPwG5eYZqts&utm_source=docs&pcampaignid=tl1802_appRelease)
 
 ## Quick Start
 
