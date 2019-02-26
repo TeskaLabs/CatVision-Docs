@@ -14,7 +14,7 @@ _Remark about a simulator:_ As of iOS 11.2, a screen capture is not enabled by A
 
 ## Add a CatVision.io SDK
 
-Download [CatVision.io SDK for iOS](https://www.catvision.io/get/CatVisionIO.framework.zip) and unzip downloaded ZIP archive. The archive contains `CatVisionIO.framework`.
+Download [CatVision.io SDK for iOS](https://s3.amazonaws.com/resources.seacat.mobi/releases/CatVisionIO.framework-17.12.105.zip) and unzip downloaded ZIP archive. The archive contains `CatVisionIO.framework`.
 
 ![Unzip downloaded CatVision.io SDK for iOS](../assets/cvio_ios_download.png)
 
