@@ -11,7 +11,7 @@ In this section we describe how to integrate a CatVision.io SDK into an Android 
 
 * A source code of the Android application
 * Android Studio
-* _CatVision.io API Key ID_ \(see [Catvision.io API Key](//get-started/api-key.md)\)
+* _CatVision.io API Key ID_ \(see [Catvision.io API Key]({{site.baseurl}}/catvision/get-started/api-key.md)\)
 
 _Remark about Android version requirement:_ Android provides the screen capture functionality starting from API level 21 respective Android 5.0. CatVision.io SDK for Android can be integrated into applications targeting older Android versions, but screen sharing will not be functional.
 
@@ -29,7 +29,7 @@ The CatVision.io SDK is now added to your Android application.
 
 ## Add the CatVision.io API Key ID
 
-_CatVision.io API Key ID_ has to be added into the _App Manifest_ \(or `AndroidManifest.xml`\) of the Android app so that the application authenticates properly to [catvision.io](https://app.catvision.io). See [Catvision.io API Key](//get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
+_CatVision.io API Key ID_ has to be added into the _App Manifest_ \(or `AndroidManifest.xml`\) of the Android app so that the application authenticates properly to [catvision.io](https://app.catvision.io). See [Catvision.io API Key]({{site.baseurl}}/catvision/get-started/api-key.md) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
 
 Open `AndroidManifest.xml` file of your Android app and add a `<meta-data android:name="cvio.api_key_id" ...>` line into `<application>` tag:
 

@@ -23,9 +23,9 @@ Now you can try CatVision.io SDK for Android before actual implementation, alrea
 
 Here is a step-by-step guidelines that gets you quickly up to speed with CatVision.io:
 
-1. [Get an CatVision.io API key](//get-started/api-key.md)
-2. Add CatVision.io SDK into your [Android app](//get-started/sdk-android.md) or [iOS app](//get-started/sdk-ios.md)
-3. [Add CatVision.io Display into your web application](//get-started/display.md) \(optionally\)
+1. [Get an CatVision.io API key]({{site.baseurl}}/catvision/get-started/api-key.md)
+2. Add CatVision.io SDK into your [Android app]({{site.baseurl}}/catvision/get-started/sdk-android.md) or [iOS app]({{site.baseurl}}/catvision/get-started/sdk-ios.md)
+3. [Add CatVision.io Display into your web application]({{site.baseurl}}/catvision/get-started/display.md) \(optionally\)
 
 ## Support
 

@@ -19,7 +19,7 @@ Prior jumping to code, here is a brief intro into how _CatVision.io Display_ wor
 
 ## Prerequisites
 
- * _CatVision.io Secret API Key_ \(see [Catvision.io API Key](//get-started/api-key.md)\)
+ * _CatVision.io Secret API Key_ \(see [Catvision.io API Key]({{site.baseurl}}/catvision/get-started/api-key.md)\)
 
 _Security note: We recommend to generate a dedicated API Key for each CatVision.io Display and not to share it. If one API Key get compromised, only one integration will be affected._
 
