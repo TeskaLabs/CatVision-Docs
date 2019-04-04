@@ -11,7 +11,7 @@ In this section we describe how to integrate a CatVision.io SDK into an Android 
 
 * A source code of the Android application
 * Android Studio
-* _CatVision.io API Key ID_ \(see [Catvision.io API Key]({{site.baseurl}}/catvision/get-started/api-key.html)\)
+* _CatVision.io API Key ID_ \(see [Catvision.io API Key]({{site.url}}/get-started/api-key.html)\)
 
 _Remark about Android version requirement:_ Android provides the screen capture functionality starting from API level 21 respective Android 5.0. CatVision.io SDK for Android can be integrated into applications targeting older Android versions, but screen sharing will not be functional.
 
@@ -23,13 +23,13 @@ Insert a following line into `dependencies` section of your Android application 
 compile 'com.teskalabs.cvio:catvision-io-sdk-android:+'
 ```
 
-![Add CatVision.io SDK dependency via Android Studio]({{site.baseurl}}/catvision/assets/cvio_android_studio_dependencies.png)
+![Add CatVision.io SDK dependency via Android Studio]({{site.url}}/assets/images/cvio_android_studio_dependencies.png)
 
 The CatVision.io SDK is now added to your Android application.
 
 ## Add the CatVision.io API Key ID
 
-_CatVision.io API Key ID_ has to be added into the _App Manifest_ \(or `AndroidManifest.xml`\) of the Android app so that the application authenticates properly to [catvision.io](https://app.catvision.io). See [Catvision.io API Key]({{site.baseurl}}/catvision/get-started/api-key.html) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
+_CatVision.io API Key ID_ has to be added into the _App Manifest_ \(or `AndroidManifest.xml`\) of the Android app so that the application authenticates properly to [catvision.io](https://app.catvision.io). See [Catvision.io API Key]({{site.url}}/get-started/api-key.html) for more information of how to get obtain _CatVision.io API Key ID_ if you don't have one.
 
 Open `AndroidManifest.xml` file of your Android app and add a `<meta-data android:name="cvio.api_key_id" ...>` line into `<application>` tag:
 
@@ -43,7 +43,7 @@ Open `AndroidManifest.xml` file of your Android app and add a `<meta-data androi
 </application>
 ```
 
-![CatVision.io API Key ID is added to AndroidManifest.xml]({{site.baseurl}}/catvision/assets/cvio_android_studio_manifest.png)
+![CatVision.io API Key ID is added to AndroidManifest.xml]({{site.url}}/assets/images/cvio_android_studio_manifest.png)
 
 
 ## Start a screen sharing
@@ -134,5 +134,5 @@ Screen sharing function is ready. You can compile the application now and start 
 
 When screen sharing is started in the mobile apps, you should see the connected client at [app.catvision.io](https://app.catvision.io):
 
-![Android Application connected to CatVision.io]({{site.baseurl}}/catvision/assets/cvio_android_emulator_share.png)
+![Android Application connected to CatVision.io]({{site.url}}/assets/images/cvio_android_emulator_share.png)
 

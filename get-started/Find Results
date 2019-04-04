@@ -1,0 +1,17 @@
+Searching 113 files for "/assets/cvio_android_emulator_share.png"
+
+/Users/macbook/teskalabs/CatVision-Docs/_site/get-started/sdk-android.html:
+  160  <p>When screen sharing is started in the mobile apps, you should see the connected client at <a href="https://app.catvision.io">app.catvision.io</a>:</p>
+  161  
+  162: <p><img src="../assets/cvio_android_emulator_share.png" alt="Android Application connected to CatVision.io" /></p>
+  163  
+  164  
+
+/Users/macbook/teskalabs/CatVision-Docs/get-started/sdk-android.md:
+  135  When screen sharing is started in the mobile apps, you should see the connected client at [app.catvision.io](https://app.catvision.io):
+  136  
+  137: ![Android Application connected to CatVision.io]({{site.url}}/assets/cvio_android_emulator_share.png)
+  138  
+  139  
+
+2 matches across 2 files

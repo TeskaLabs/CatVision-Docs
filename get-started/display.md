@@ -15,11 +15,11 @@ _CatVision.io Display_ is an HTML5 component that requires JavaScript and WebSoc
 
 Prior jumping to code, here is a brief intro into how _CatVision.io Display_ works.
 
-![Add CatVision.io SDK dependency via Android Studio]({{site.baseurl}}/catvision/assets/images/cvio_display_arch.png)
+![Add CatVision.io SDK dependency via Android Studio]({{site.url}}/assets/images/cvio_display_arch.png)
 
 ## Prerequisites
 
- * _CatVision.io Secret API Key_ \(see [Catvision.io API Key]({{site.baseurl}}/catvision/get-started/api-key.html)\)
+ * _CatVision.io Secret API Key_ \(see [Catvision.io API Key]({{site.url}}/get-started/api-key.html)\)
 
 _Security note: We recommend to generate a dedicated API Key for each CatVision.io Display and not to share it. If one API Key get compromised, only one integration will be affected._
 
@@ -134,6 +134,6 @@ Here is an example of client tag: `[GMYDQMRQGIYGCMBS]`
 
 A client tag is shown also at [app.catvision.io](https://app.catvision.io):
 
-![CatVision.io Client Tag in a web app]({{site.baseurl}}/catvision/assets/images/cvio_client_tag_ap.png)
+![CatVision.io Client Tag in a web app]({{site.url}}/assets/images/cvio_client_tag_ap.png)
 
 *Note: If you are looking for your own identification of the remote screen app, visit a Custom ID chapter to learn more.*

@@ -22,15 +22,15 @@ Thank you for your help in creating a better product!
 
 ### Where to find Client Tag?
 
-![Client tag in the list of clients]({{site.baseurl}}/catvision/assets/images/cvio_client_tag_location_2.png)
+![Client tag in the list of clients]({{site.url}}/assets/images/cvio_client_tag_location_2.png)
 
 OR
 
-![Client tag in the detail of client]({{site.baseurl}}/catvision/assets/images/cvio_client_tag_location_1.png)
+![Client tag in the detail of client]({{site.url}}/assets/images/cvio_client_tag_location_1.png)
 
 ### Where to find Logcat in Android Studio?
 
-![LogCat in Android studio]({{site.baseurl}}/catvision/assets/images/cvio_android_studio_logcat.png)
+![LogCat in Android studio]({{site.url}}/assets/images/cvio_android_studio_logcat.png)
 
 
 
