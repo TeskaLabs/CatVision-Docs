@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 # Summary
 
 ## CatVision.io

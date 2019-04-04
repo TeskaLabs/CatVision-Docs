@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 # CatVision.io Frequently Asked Questions
 
 ## What is "App ID"?

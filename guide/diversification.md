@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 # Welcome to CatVision.io
 
 ### We have one question for you, really important one...

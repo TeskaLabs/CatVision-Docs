@@ -1,5 +1,6 @@
 ---
-description: This is a page for SW Developer
+layout: default
+title: CatVision documentation
 ---
 
 # Ha, a developer!

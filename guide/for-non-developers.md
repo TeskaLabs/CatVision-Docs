@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 ## Welcome to non-dev guide!
 
 As you know, CatVision.io is a developer kit, so you need a software developer for successful implementation. But before you [invite ](/guide/invitation.md "How to invite...")him to check this out, stay with us little longer, we want to tell you something.

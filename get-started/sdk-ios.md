@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 # Adding a CatVision.io SDK into an iOS application
 
 In this section we describe how to integrate a CatVision.io SDK into an iOS application so that an operator can access it remotely.

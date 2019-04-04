@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 # Adding the CatVision.io Display
 
 CatVision.io provides the remote access via [app.catvision.io](https://app.catvision.io).

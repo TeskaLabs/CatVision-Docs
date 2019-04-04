@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 # How to report an issue with CatVision.io
 
 Nothing is without issues, and when this occurs, we are here for you to help solve any problems with our product.
@@ -17,15 +22,15 @@ Thank you for your help in creating a better product!
 
 ### Where to find Client Tag?
 
-![Client tag in the list of clients](/assets/cvio_client_tag_location_2.png)
+![Client tag in the list of clients]({{site.baseurl}}/catvision/assets/images/cvio_client_tag_location_2.png)
 
 OR
 
-![Client tag in the detail of client](/assets/cvio_client_tag_location_1.png)
+![Client tag in the detail of client]({{site.baseurl}}/catvision/assets/images/cvio_client_tag_location_1.png)
 
 ### Where to find Logcat in Android Studio?
 
-![LogCat in Android studio](/assets/cvio_android_studio_logcat.png)
+![LogCat in Android studio]({{site.baseurl}}/catvision/assets/images/cvio_android_studio_logcat.png)
 
 
 

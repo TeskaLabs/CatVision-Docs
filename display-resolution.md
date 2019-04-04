@@ -1,3 +1,8 @@
+---
+layout: default
+title: CatVision documentation
+---
+
 # CatVision.io Display Resolution
 
 CatVision.io tries to automatically choose optimal screen resolution of a remote display in order to provide optimal experience and also save network bandwidth which is also very important for a fluent experience of the remote operator.

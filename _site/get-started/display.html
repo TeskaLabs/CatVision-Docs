@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CatVision documentation</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="https://teskalabs.com/">
+                <img src="/assets/images/brand.png">
+            </a>
+          </div>
+          <div class="col-md-8">
+            <div class="links">
+              <a href="https://docs.teskalabs.com/">Docs</a>
+              <a href="https://teskalabs.com/blog/">Blog</a>
+              <a href="https://teskalabs.com/contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="col-md-12 pt-3">
+        <h1 id="adding-the-catvisionio-display">Adding the CatVision.io Display</h1>
+
+<p>CatVision.io provides the remote access via <a href="https://app.catvision.io">app.catvision.io</a>.
+Additionally, it offers the option to integrate the component <em>CatVision.io Display</em> into third-party applications. 
+Operators can then use remote access directly from existing tools such as Salesforce (CRM) or ZenDesk (Customer support).</p>
+
+<p><em>CatVision.io Display</em> is an HTML5 component that requires JavaScript and WebSockets.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>Prior jumping to code, here is a brief intro into how <em>CatVision.io Display</em> works.</p>
+
+<p><img src="../assets/cvio_display_arch.png" alt="Add CatVision.io SDK dependency via Android Studio" /></p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li><em>CatVision.io Secret API Key</em> (see <a href="//get-started/api-key.md">Catvision.io API Key</a>)</li>
+</ul>
+
+<p><em>Security note: We recommend to generate a dedicated API Key for each CatVision.io Display and not to share it. If one API Key get compromised, only one integration will be affected.</em></p>
+
+<h2 id="1-obtain-the-authorization-token">1. Obtain the authorization token</h2>
+
+<p>The <em>CatVision.io Display</em> is authorized for remote access by a time limited <code class="highlighter-rouge">AUTHORIZATION_TOKEN</code>. This authorization token has to be obtained by <em>Operator Application Server</em> (this is your application backend code) using <em>Secret API key</em> (<code class="highlighter-rouge">SECRET_API_KEY</code>) from a <em>app.catvision.io</em> API via a REST call. The authorization token is an opaque string. The authorization token is valid for XX minutes and the application has to obtain a new token after a timeout.</p>
+
+<p>The relevant <em>app.catvision.io</em> API endpoint is available at <code class="highlighter-rouge">https://app.catvision.io/api/authorization-token</code>.<br />
+You need to send a POST request to this API endpoint with the <code class="highlighter-rouge">SECRET_API_KEY</code> variable. See an template of JSON body of the request:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"secret_api_key"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">SECRET_API_KEY</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <em>app.catvision.io</em> API endpoint responds with a following response in JSON format (the authorization_token is of course different for each call):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ok"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"authorization_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"88e52eebd7c992b3e95597596996e693_1502538423.52.61d94fb4b845b8b25181fd1b375513905c61f5a80e706481eb052fc6"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Here are examples of how to fetch the authorization token using some of the popular languages.</p>
+
+<h3 id="php">PHP</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s1">'https://app.catvision.io/api/authorization-token'</span><span class="p">;</span>
+<span class="nv">$payload</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"secret_api_key"</span> <span class="o">=&gt;</span> <span class="s1">'[SECRET_API_KEY]'</span><span class="p">);</span>
+<span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'http'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">'method'</span>  <span class="o">=&gt;</span> <span class="s1">'POST'</span><span class="p">,</span>
+        <span class="s1">'header'</span> <span class="o">=&gt;</span> <span class="s2">"Content-Type: application/json</span><span class="se">\r\n</span><span class="s2">"</span><span class="p">,</span>
+        <span class="s1">'content'</span> <span class="o">=&gt;</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$payload</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">);</span>
+<span class="nv">$context</span> <span class="o">=</span> <span class="nb">stream_context_create</span><span class="p">(</span><span class="nv">$options</span><span class="p">);</span>
+<span class="nv">$r</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">$context</span><span class="p">);</span>
+<span class="nv">$res</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$r</span><span class="p">);</span>
+<span class="nv">$authorization_token</span> <span class="o">=</span> <span class="nv">$res</span><span class="o">-&gt;</span><span class="p">{</span><span class="s1">'authorization_token'</span><span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="python">Python</h3>
+
+<p>This example uses <code class="highlighter-rouge">requests</code> <a href="http://docs.python-requests.org/en/master/">module</a>.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span><span class="p">,</span> <span class="n">json</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://app.catvision.io/api/authorization-token"</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span> <span class="s">"secret_api_key"</span><span class="p">:</span> <span class="p">[</span><span class="n">SECRET_API_KEY</span><span class="p">]</span> <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">))</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">authorization_token</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s">'authorization_token'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="curl">curl</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl \
+--data '{"secret_api_key": "[SECRET_API_KEY]"}' \
+	-H "Content-Type: application/json" \
+	https://app.catvision.io/api/authorization-token
+</code></pre></div></div>
+
+<h2 id="2-include-catvisionio-display">2. Include CatVision.io Display</h2>
+
+<p>Load the <em>CatVision.io Display</em> component:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+    ...
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://app.catvision.io/get/cvio.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    ...
+<span class="nt">&lt;/head&gt;</span>
+</code></pre></div></div>
+
+<p>Put this initialization code immediately after the <code class="highlighter-rouge">&lt;body&gt;</code> tag.
+This code must be generated by your application backend code with an <code class="highlighter-rouge">AUTHORIZATION_TOKEN</code> obtained in a first step.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+		<span class="nx">CVIO</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span><span class="na">authorizationToken</span><span class="p">:</span> <span class="s1">'[AUTHORIZATION_TOKEN]'</span><span class="p">});</span>
+	<span class="nt">&lt;/script&gt;</span>
+...
+</code></pre></div></div>
+
+<h2 id="3-display-a-remote-screen">3. Display a remote screen</h2>
+
+<p>Now, assuming an existing <code class="highlighter-rouge">&lt;canvas id='cviocanvas'&gt;</code> in a DOM of your HTML page, this is how you instantiate a <em>CatVision.io Display</em> and connect it to a remote client application identified by <code class="highlighter-rouge">[CLIENT_TAG]</code>.
+The client tag is a unique identification of a remote app provided by <em>CatVision.io</em>, you can obtain it via a CatVision.io SDK call. The client tag has always 16 characters plus two for brackets.
+Here is an example of client tag: <code class="highlighter-rouge">[GMYDQMRQGIYGCMBS]</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">'cviocanvas'</span><span class="nt">&gt;</span>
+...
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+	<span class="kd">var</span> <span class="nx">cvioDisplay</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CVIODisplay</span><span class="p">({</span>
+		<span class="na">target</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'cviocanvas'</span><span class="p">),</span>
+		<span class="na">clientTag</span><span class="p">:</span> <span class="s1">'[CLIENT_TAG]'</span><span class="p">,</span>
+	<span class="p">});</span>
+	<span class="nx">cvioDisplay</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>A client tag is shown also at <a href="https://app.catvision.io">app.catvision.io</a>:</p>
+
+<p><img src="../assets/cvio_client_tag_ap.png" alt="CatVision.io Client Tag in a web app" /></p>
+
+<p><em>Note: If you are looking for your own identification of the remote screen app, visit a Custom ID chapter to learn more.</em></p>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="text-muted">© 2014-2019 TeskaLabs Ltd.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
