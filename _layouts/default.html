@@ -37,7 +37,7 @@
               <h6 style="padding: .5rem 1rem 0 1rem;">{{ item.title }}</h6>
                 <ul class="nav flex-column">
                   {% for entry in item.subfolderitems %}
-                    <li class="nav-item"><a class="nav-link" href="{{ site.url }}{{ entry.url }}">{{ entry.page }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.url }}/catvision/{{ entry.url }}">{{ entry.page }}</a></li>
                   {% endfor %}
                 </ul>
             {% endfor %}
