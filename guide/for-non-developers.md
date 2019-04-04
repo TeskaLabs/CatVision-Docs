@@ -19,13 +19,13 @@ With CatVision.io SDK implemented in a mobile application you will save time and
 
 Let's take a look at few use cases.
 
-[Point of Sale Systems]({{site.url}}/examples-of-use/point-of-sales-systems.html)
+[Point of Sale Systems]({{site.url}}/catvision/examples-of-use/point-of-sales-systems.html)
 
-[Meeting Room App]({{site.url}}/examples-of-use/meeting-room-applications.html)
+[Meeting Room App]({{site.url}}/catvision/examples-of-use/meeting-room-applications.html)
 
-[Self-service Kiosks]({{site.url}}/examples-of-use/self-service-kiosks.html)
+[Self-service Kiosks]({{site.url}}/catvision/examples-of-use/self-service-kiosks.html)
 
-[Workforce Management Apps & BYOD]({{site.url}}/examples-of-use/workforce-management-apps-and-byod-support.html)
+[Workforce Management Apps & BYOD]({{site.url}}/catvision/examples-of-use/workforce-management-apps-and-byod-support.html)
 
 Do you have in mind something different? [Contact us](mailto:team@catvision.io), and we will find a way how to help you!
 
@@ -33,7 +33,7 @@ Do you have in mind something different? [Contact us](mailto:team@catvision.io),
 
 Are you interested in using CatVision.io?
 
-For successful implementation of CatVision.io you will need a software developer. Just [invite ]({{site.url}}/guide/invitation.html "How to invite...")him to your Product. He will find everything required for implementation in our [Documentation]({{site.url}}/index.html).
+For successful implementation of CatVision.io you will need a software developer. Just [invite ]({{site.url}}/catvision/guide/invitation.html "How to invite...")him to your Product. He will find everything required for implementation in our [Documentation]({{site.url}}/catvision/index.html).
 
 Or, we could do it for you! [Write us an email](mailto:team@catvision.io).
 

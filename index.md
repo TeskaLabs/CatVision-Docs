@@ -11,21 +11,21 @@ Users of a mobile application equipped by CatVision.io can get a real-time onlin
 
 Customer or technical support uses a web browser to display a shared screen of the mobile device and control the app remotely. They can use the [CatVision.io](https://app.catvision.io/) web portal or a _CatVision.io Display_ integrated to their common tools such as CRM.
 
-![CatVision.io logo]({{site.url}}/assets/images/catvision-logo-03.png)
+![CatVision.io logo]({{site.url}}/catvision/assets/images/catvision-logo-03.png)
 
 ## CatVision.io App
 
 Now you can try CatVision.io SDK for Android before actual implementation, already SDK-equipped app is available on Google Play.
 
-[![]({{site.url}}/assets/images/google_play_badge.png)](https://play.google.com/store/apps/details?id=io.catvision.appl&hl=en&ah=w4CyTRg17aiaKAzNpPwG5eYZqts&utm_source=docs&pcampaignid=tl1802_appRelease)
+[![]({{site.url}}/catvision/assets/images/google_play_badge.png)](https://play.google.com/store/apps/details?id=io.catvision.appl&hl=en&ah=w4CyTRg17aiaKAzNpPwG5eYZqts&utm_source=docs&pcampaignid=tl1802_appRelease)
 
 ## Quick Start
 
 Here is a step-by-step guidelines that gets you quickly up to speed with CatVision.io:
 
-1. [Get an CatVision.io API key]({{site.url}}/get-started/api-key.html)
-2. Add CatVision.io SDK into your [Android app]({{site.url}}/get-started/sdk-android.html) or [iOS app]({{site.url}}/get-started/sdk-ios.html)
-3. [Add CatVision.io Display into your web application]({{site.url}}/get-started/display.html) \(optionally\)
+1. [Get an CatVision.io API key]({{site.url}}/catvision/get-started/api-key.html)
+2. Add CatVision.io SDK into your [Android app]({{site.url}}/catvision/get-started/sdk-android.html) or [iOS app]({{site.url}}/catvision/get-started/sdk-ios.html)
+3. [Add CatVision.io Display into your web application]({{site.url}}/catvision/get-started/display.html) \(optionally\)
 
 ## Support
 
@@ -35,5 +35,5 @@ If you have any question or trouble, please chat with our [support team](https:/
 
 CatVision.io is a product of [TeskaLabs](https://www.teskalabs.com).
 
-![TeskaLabs]({{site.url}}/assets/images/teskalabs-logo.png)
+![TeskaLabs]({{site.url}}/catvision/assets/images/teskalabs-logo.png)
 

@@ -5,7 +5,7 @@ title: CatVision documentation
 
 # CatVision.io System Architecture
 
-![CatVision.io System Architecture]({{site.url}}/assets/images/cvio_system_architecture.png)
+![CatVision.io System Architecture]({{site.url}}/catvision/assets/images/cvio_system_architecture.png)
 
 
 <!--1. Your device equipped with [**SeaCat Android SDK**](https://s3.amazonaws.com/resources.seacat.mobi/releases/SeaCatClient_Android_v1611-rc-2-release.aar) and  [**CatVision SDK**](https://s3.amazonaws.com/resources.seacat.mobi/releases/tlra-v1611-rc-2-release.aar) connects to the **SeaCat Gateway**
