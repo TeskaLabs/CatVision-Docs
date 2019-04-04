@@ -28,9 +28,26 @@
       </div>
     </header>
 
-    <main class="container">
-      <div class="col-md-12 pt-3">
-        {{ content }}
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-2 pt-5 pb-5">
+            {% for item in site.data.sidebar.toc %}
+              <h6 style="padding: .5rem 1rem 0 1rem;">{{ item.title }}</h6>
+                <ul class="nav flex-column">
+                  {% for entry in item.subfolderitems %}
+                    <li class="nav-item"><a class="nav-link" href="{{ site.url }}{{ entry.url }}">{{ entry.page }}</a></li>
+                  {% endfor %}
+                </ul>
+            {% endfor %}
+          </div>
+
+          <div class="col-md-8 pt-5 pb-5">
+            {{ content }}
+
+          </div>
+        </div>
       </div>
     </main>
 
