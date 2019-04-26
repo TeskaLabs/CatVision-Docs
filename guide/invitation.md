@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CatVision documentation
+sidebar: catvision
 ---
 
 # How to invite a colleague to your product

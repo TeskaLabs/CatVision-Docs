@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CatVision documentation
+sidebar: catvision
 ---
 
 # Create a CatVision.io API key

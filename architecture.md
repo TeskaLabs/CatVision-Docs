@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CatVision documentation
+sidebar: catvision
 ---
 
 # CatVision.io System Architecture

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CatVision documentation
+sidebar: catvision
 ---
 
 # Adding the CatVision.io Display
