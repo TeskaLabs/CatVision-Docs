@@ -38,3 +38,11 @@ CatVision.io is a product of [TeskaLabs](https://www.teskalabs.com).
 
 ![TeskaLabs]({{site.url}}/catvision/assets/images/teskalabs-logo.png)
 
+## Layout
+
+Site's layout can be edited in `teskalabs-docs` repository.
+
+## Deployment
+
+For deployment instructions please refer to `teskalabs-docs` respository.
+
