@@ -32,17 +32,19 @@ Here is a step-by-step guidelines that gets you quickly up to speed with CatVisi
 
 If you have any question or trouble, please chat with our [support team](https://tawk.to/chat/5978bc920d1bb37f1f7a5f6a/default/?$_tawk_popout=true) online or drop us an email at [team@catvision.io](mailto:team@catvision.io). We are ready to help you and we typically respond within minutes.
 
+## Structure
+
+This is a submodule of `teskalabs-docs` repository. Site's layout and docs index page can be edited in `teskalabs-docs` repository.
+
+## Deployment
+
+For deployment instructions please refer to `teskalabs-docs` respository.
+
 ## Product of TeskaLabs
 
 CatVision.io is a product of [TeskaLabs](https://www.teskalabs.com).
 
 ![TeskaLabs]({{site.url}}/catvision/assets/images/teskalabs-logo.png)
 
-## Layout
 
-Site's layout can be edited in `teskalabs-docs` repository.
-
-## Deployment
-
-For deployment instructions please refer to `teskalabs-docs` respository.
 
