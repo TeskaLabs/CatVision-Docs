@@ -104,7 +104,7 @@ public class MyActivity extends Activity {
         ...
 
         if (item.getItemId() == menuItemStartScreenShareId) {
-            catvision.requestStart(this, menuItemStopScreenShareId);
+            catvision.requestStart(this, CATVISION_REQUEST_CODE);
             return true;
         }
 
