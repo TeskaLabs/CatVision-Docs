@@ -1,0 +1,53 @@
+link: catvision
+
+toc:
+- title: INTRODUCTION
+  url: /
+
+- title: GETTING STARTED
+  url: /get-started
+  items:
+    - title: CatVision.io API Key
+      url: /get-started/api-key
+
+    - title: CatVision.io SDK for Android
+      url: /get-started/sdk-android
+
+    - title: CatVision.io SDK for IOS
+      url: /get-started/sdk-ios
+
+    - title: CatVision.io Display
+      url: /get-started/display
+
+- title: MANUAL
+  url: /manual
+  items:
+    - title: Reporting issues
+      url: /support
+
+    - title: How to invite a user to CatVision.io
+      url: /how-to-invite-a-user
+
+    - title: FAQ
+      url: /faq
+
+    - title: Display resolution
+      url: /display-resolution
+
+    - title: Architecture
+      url: /architecture
+
+- title: EXAMPLES OF USE
+  url: /examples-of-use
+  items:
+    - title: POS Systems
+      url: /examples-of-use/point-of-sales-systems
+
+    - title: Meeting Room App
+      url: /examples-of-use/meeting-room-applications
+
+    - title: Self-service Kiosks
+      url: /examples-of-use/self-service-kiosks
+
+    - title: WMA & BYOD
+      url: /examples-of-use/workforce-management-apps-and-byod-support
